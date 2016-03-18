@@ -11,6 +11,7 @@
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.1",
+    "gulp-cssmin": "^0.1.7",
     "gulp-shell": "^0.5.2",
     "lodash": "^4.6.1"
   }

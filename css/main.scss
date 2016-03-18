@@ -1,53 +1,132 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-@charset "utf-8";
 
+// - - - - - - - - - - - - - IMPORTS - - - - - - - - - - - - - //
 
+@import "variables", "base";
 
-// Our variables
-$base-font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+// - - - - - - - - - - - - NAVIGATION - - - - - - - - - - - - //
 
-$spacing-unit:     30px;
+.navigation {
+	@extend %clearfix;
+	height: $height-navbar;
+	background-color: $white;
 
-$text-color:       #222;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+	.logo {
+		img {
+			width: 44px!important;
+			height: auto;
+			margin-top: 15px;
+		}
+	}
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+	nav {
+		float:right;
+		padding: 6px 0;
+		font-weight: 500;
+		ul {
+			list-style: none;
+		}
+		li {
+			float: left;
+			margin-left: 20px;
+		}
+		li.active a {
+			font-weight: 600;
+		}
+		a {
+			text-decoration: none;
+			color: $color-bg-dark;
+			&:hover, &:active, &:focus {
+				text-decoration: none;
+				color: $color-bg-dark-bright;
+			}
+		}
+	}
 }
 
+// - - - - - - - - - - - - FW LOGO - - - - - - - - - - - - //
 
+.fw-logo {
+	padding: 10px 0;
+	margin-left: 44px;
+	.title {
+		margin: 0;
+		font-size: 5rem;
+		letter-spacing: -0.25rem;
+		line-height: 2.75rem;
+		text-transform: lowercase;
+		.first {
+			font-weight: 300;
+		}
+		.last {
+			font-weight: 500;
+			color: $color-highlight;
+		}
+		.suffix {
+			font-weight: 200;
+		}
+	}
+	.subtitle {
+		margin: 0;
+		font-size: 2.33rem;
+		font-weight: 300;
+		line-height: 3rem;
+		text-transform: lowercase;
+		span {
+			color: $color-highlight;
+		}
+	}
+}
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+// - - - - - - - - - - - - TOP BANNER - - - - - - - - - - - - //
+
+.top-banner {
+	background-color: $color-bg-dark;
+	.container {
+		padding-top: 128px;
+		height: 450px;
+	}
+	&#home {
+		.container {
+			background: $color-bg-dark url("../images/top-banner_img_home.png") no-repeat right bottom;
+		}
+	}
+}
+
+// - - - - - - - - - - - - FOOTER - - - - - - - - - - - - //
+
+footer {
+	@extend %clearfix;
+	background-color: $color-footer;
+	font-size: 14px;
+	p, ul {
+		margin: 16px 0;
+	}
+	.copyright {
+		width: 50%;
+		float:left;
+	}
+	.footer-navigation {
+		width: 50%;
+		float: right;
+		ul {
+			padding: 0;
+		}
+		li {
+			float: right;
+			list-style: none;
+			padding-left: 16px;
+		}
+		a {
+			color: $white;
+			text-decoration: none;
+			text-transform: uppercase;
+			&:hover, &:active, &:focus {
+				text-decoration: none;
+				color: darken($white, 15%);
+			}
+		}
+	}
+}

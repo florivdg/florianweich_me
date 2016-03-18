@@ -6,13 +6,13 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Florian Weich
+title: florianweich.me
 email: hallo@florianweich.me
 description: >
   Florian Weich. Designer. Webentwickler.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://florianweich.me" # the base hostname & protocol for your site
-twitter_username: florianweich
+#twitter_username: florianweich
 #github_username:  florianweich
 
 # Build settings
@@ -21,4 +21,4 @@ sass:
   style: compressed
 gems:
   - octopress-autoprefixer
-exclude: [node_modules, gulpfile.js]
+exclude: [node_modules, gulpfile.js, bower_components, Gemfile, Gemfile.lock, package.json]
