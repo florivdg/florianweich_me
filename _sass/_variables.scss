@@ -5,9 +5,11 @@ $color-bg-dark:          #2e3440;
 $color-bg-dark-bright:   #434953;
 $color-footer:           #1c1f26;
 $color-highlight:        #bef41a;
-$color-gradient-start:   #cdef11;
-$color-gradient-end:     #dbff12;
+$color-gradient-start:   #d9ff42;
+$color-gradient-end:     #cbef3e;
 $color-text:             $white;
+$color-blue:             #25b7d3;
+$color-code-pre:         #636870;
 
 // - - - - - - - - - - - - - FONTS - - - - - - - - - - - - - //
 
@@ -19,3 +21,14 @@ $base-font-weight: 400;
 
 $height-navbar: 66px;
 $height-footer: 50px;
+$padding-section: 60px;
+
+// - - - - - - - - - - - - - CARDS - - - - - - - - - - - - - //
+
+$border-radius-card: 8px;
+
+// - - - - - - - - - - - - - TRANSITIONS - - - - - - - - - - - - - //
+
+$transition-time-standard:    .25s;
+$transition-time-button:      .25s;
+$transition-time-icon-circle: .33s;

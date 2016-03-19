@@ -38,7 +38,7 @@
 		a {
 			text-decoration: none;
 			color: $color-bg-dark;
-			&:hover, &:active, &:focus {
+			&:hover, &:active, &:visited, &:focus {
 				text-decoration: none;
 				color: $color-bg-dark-bright;
 			}
@@ -74,7 +74,7 @@
 		font-weight: 300;
 		line-height: 3rem;
 		text-transform: lowercase;
-		span {
+		.green {
 			color: $color-highlight;
 		}
 	}
@@ -123,9 +123,233 @@ footer {
 			color: $white;
 			text-decoration: none;
 			text-transform: uppercase;
-			&:hover, &:active, &:focus {
+			&:hover, &:active, &:visited, &:focus {
 				text-decoration: none;
 				color: darken($white, 15%);
+			}
+		}
+	}
+}
+
+// - - - - - - - - - - - CODE SEPARATOR - - - - - - - - - - - //
+
+section.code-separator {
+	padding: 90px 0;
+	font-family: "Source Code Pro", sans-serif;
+	font-weight: 600;
+	font-size: 1.7em;
+	letter-spacing: -0.08em;
+	text-align: center;
+	.pre {
+		color: $color-code-pre;
+		font-size: 2em;
+		letter-spacing: -0.09em;
+		position: relative;
+		top: 8px;
+		margin-right: 20px;
+	}
+	.green {
+		color: $color-highlight;
+	}
+	.blue {
+		color: $color-blue;
+	}
+}
+
+// - - - - - - - - - - - - CARDS - - - - - - - - - - - - //
+.cards {
+	@extend %clearfix;
+	margin-top: -50px;
+	z-index: 50;
+}
+.card {
+	width: 100%;
+	float: left;
+  border-radius: $border-radius-card;
+  background-color: $white;
+  box-shadow: 0px 7px 23px 0px rgba(52, 52, 52, 0.4);
+  z-index: 100;
+	color: $color-bg-dark;
+	.card-header {
+		background-color: $color-gradient-start;
+		$card-background-gradient: linear-gradient($color-gradient-start, $color-gradient-end);
+		background-image: $card-background-gradient;
+		height: 100px;
+		border-top-left-radius: $border-radius-card;
+		border-top-right-radius: $border-radius-card;
+		&#card-bg-01 {
+			background: url("../images/bg_card_01.png") no-repeat, $card-background-gradient;
+			@include retina {
+				background: url("../images/bg_card_01@2x.png") no-repeat, $card-background-gradient;
+			}
+		}
+		&#card-bg-02 {
+			background: url("../images/bg_card_02.png") no-repeat, $card-background-gradient;
+			@include retina {
+				background: url("../images/bg_card_02@2x.png") no-repeat, $card-background-gradient;
+			}
+		}
+		&#card-bg-03 {
+			background: url("../images/bg_card_03.png") no-repeat, $card-background-gradient;
+			@include retina {
+				background: url("../images/bg_card_03@2x.png") no-repeat, $card-background-gradient;
+			}
+		}
+		.icon-circle {
+		  border-radius: 50%;
+		  background-color: rgb(255, 255, 255);
+		  box-shadow: 0px 2px 10px 0px rgba(52, 52, 52, 0.3);
+		  width: 110px;
+		  height: 110px;
+		  z-index: 150;
+			margin: 0 auto;
+			transform: translateY(-33%);
+			transition: transform $transition-time-icon-circle ease-in-out;
+			padding: 5px;
+			img {
+				width: 100px;
+				height: 100px;
+			}
+		}
+	}
+	&:hover {
+		.card-header .icon-circle {
+			transform: translateY(-25%);
+		}
+	}
+	.card-body {
+		padding: 15px;
+		padding-bottom: 35px;
+		text-align: center;
+		h4 {
+			font-size: 1.6em;
+			font-weight: 500;
+			text-align: center;
+			margin: 0;
+			margin-bottom: 10px;
+		}
+		p {
+			text-align: center;
+			margin-bottom: 35px;
+		}
+		.btn {
+			margin: 10px 0;
+		}
+	}
+}
+
+// - - - - - - - - - - - - REFEREZEN START - - - - - - - - - - - - //
+#references {
+	padding-top: $padding-section;
+	text-align: center;
+	overflow: hidden;
+	.slider-nav {
+		@extend %clearfix;
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+		li {
+			display: block;
+			list-style: none;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: #424952;
+			float: left;
+			margin-right: 5px;
+			transition: background-color $transition-time-standard ease-in-out;
+			&.active, &:hover {
+				background-color: $color-highlight;
+			}
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+	.slider {
+		$slider-height: 375px;
+		@extend %clearfix;
+		padding: 0;
+		margin: 0;
+		margin-top: 50px;
+		position: relative;
+		height: $slider-height;
+		li {
+			list-style: none;
+			width: 600px;
+			height: $slider-height;
+			display: block;
+			background-color: $white;
+		  border-top-right-radius: $border-radius-card;
+			border-top-left-radius: $border-radius-card;
+		  box-shadow: 0px 8px 40px 0px rgba(52, 52, 52, 0.75);
+			overflow: hidden;
+			position: absolute;
+			img {
+				width: 100%;
+				height: auto;
+			}
+			&.active {
+				left: 50%;
+				margin-left: -300px;
+				z-index: 250;
+			}
+			&:not(.active) {
+				transform: scale(0.9);
+				top: 19px;
+				z-index: 200;
+				&.left {
+					left: -30px;
+				}
+				&.right {
+					right: -30px;
+				}
+			}
+		}
+	}
+}
+
+// - - - - - - - - - - - - CONTACT - - - - - - - - - - - - //
+#kontakt {
+	padding: $padding-section 0;
+	text-align: center;
+	fieldset {
+		@extend %clearfix;
+		max-width: 800px;
+		display: block;
+		margin: 0 auto;
+		input {
+			width: 100%;
+		}
+		textarea {
+			margin-top: 10px;
+			width: 100%;
+		}
+		button {
+			margin-top: 10px;
+			float: right;
+		}
+	}
+	.social-list {
+		@extend %clearfix;
+		display: inline-block;
+		list-style: none;
+		margin: 0;
+		margin-top: 50px;
+		padding: 0;
+		li {
+			display: block;
+			border-radius: 50%;
+			background-color: $white;
+			color: $color-bg-dark;
+			float:left;
+			margin-left: 10px;
+			$social-size: 55px;
+			width: $social-size;
+			height: $social-size;
+			.fa {
+				font-size: 2em;
+				line-height: $social-size;
 			}
 		}
 	}

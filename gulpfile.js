@@ -2,14 +2,22 @@ var gulp = require('gulp');
 var shell = require('gulp-shell');
 var browserSync = require('browser-sync').create();
 var cssmin = require('gulp-cssmin');
+var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 
 // Task to copy and minify bower components
 gulp.task('copy_bower_components', function() {
-  gulp.src('bower_components/normalize-css/normalize.css')
+  gulp.src(
+    ['bower_components/normalize-css/normalize.css',
+    'bower_components/devicons/css/devicons.css',
+    'bower_components/font-awesome/css/font-awesome.css'])
+    .pipe(concat('vendor.css'))
 		.pipe(cssmin())
-		.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest('./css/'));
+  gulp.src(
+    ['bower_components/devicons/fonts/*.*',
+    'bower_components/font-awesome/fonts/*.*'])
+    .pipe(gulp.dest('./fonts/'));
 });
 
 // Task for building blog when something changed:
