@@ -12,6 +12,14 @@
         {% else %}
         <li><a href="{{ site.baseurl }}/">Home</a></li>
         {% endif %}
+        <li class="{% if page.url contains '/kenntnisse/' %}active{% endif %} dropdown">
+          <a href="{{ "/kenntnisse/" | prepend: site.baseurl }}" class="parent">Kenntnisse</a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ "/kenntnisse/frontend/" | prepend: site.baseurl }}">HTML, CSS &amp; JS</a></li>
+            <li><a href="{{ "/kenntnisse/wordpress/" | prepend: site.baseurl }}">Wordpress</a></li>
+            <li><a href="{{ "/kenntnisse/rails/" | prepend: site.baseurl }}">Ruby on Rails</a></li>
+          </ul>
+        </li>
         {% assign pages_list = site.pages %}
         {% assign group = 'main-menu' %}
         {% include pages_list.html %}

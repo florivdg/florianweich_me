@@ -15,6 +15,7 @@ h3 {
   font-weight: 300;
   font-size: 2.25em;
   letter-spacing: -0.05em;
+  text-align: center;
   span {
     color: $color-highlight;
     font-weight: 600;
@@ -24,6 +25,9 @@ h3 {
     &.bold {
 			font-weight: 500;
 		}
+    &.fine {
+      font-weight: 200;
+    }
   }
 }
 
@@ -85,7 +89,7 @@ footer, .push {
   margin-right: -15px;
 }
 
-.col-2 {
+.half {
   width: 50%;
   padding: 0 15px;
   float: left;
@@ -93,7 +97,15 @@ footer, .push {
   min-height: 1px;
 }
 
-.col-3 {
+.two-thirds {
+  width: 66.666%;
+  padding: 0 15px;
+  float:left;
+  position: relative;
+  min-height: 1px;
+}
+
+.thirds {
   width: 33.333%;
   padding: 0 15px;
   float: left;
@@ -110,7 +122,7 @@ footer, .push {
 
 a.btn {
   text-decoration: none;
-  &:hover, &:active, &:visited, &:focus {
+  &:hover, &:active, &:focus {
     text-decoration: none;
   }
 }
@@ -124,17 +136,17 @@ a.btn {
   text-transform: uppercase;
   font-weight: 500;
   transition: all $transition-time-button ease-in-out;
-  &:hover, &:active, &:visited, &:focus {
-    background-color: lighten($color-bg-dark, 7%);
+  &:hover, &:active, &:focus {
+    background-color: lighten($color-bg-dark, 10%);
   }
 }
 
 .btn-white {
   background-color: $white;
   color: $color-bg-dark;
-  &:hover, &:active, &:visited, &:focus {
+  &:hover, &:active, &:focus {
     background-color: $color-highlight;
-    color: darken($color-bg-dark, 20%);
+    color: $color-bg-dark;
   }
 }
 

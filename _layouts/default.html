@@ -1,3 +1,7 @@
+---
+#layout: compress
+---
+
 <!DOCTYPE html>
 <html lang="de">
 
@@ -8,6 +12,15 @@
     <div class="content">
 
       {% include header.html %}
+
+      <section class="top-banner" id="{{ page.top-banner-id }}">
+        <div class="container">
+          <div class="fw-logo">
+            <h1 class="title"><span class="first">florian</span><span class="last">weich</span><span class="suffix">.me</span></h1>
+            <h2 class="subtitle">{{ page.subtitle }}</h2>
+          </div>
+        </div>
+      </section>
 
       {{ content }}
 

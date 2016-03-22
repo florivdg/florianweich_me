@@ -21,4 +21,6 @@ sass:
   style: compressed
 gems:
   - octopress-autoprefixer
-exclude: [node_modules, gulpfile.js, bower_components, Gemfile, Gemfile.lock, package.json]
+exclude: [node_modules, gulpfile.js, bower_components, Gemfile, Gemfile.lock, package.json, js/scripts.js]
+collections:
+  - html_tools_frameworks

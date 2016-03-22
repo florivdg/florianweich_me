@@ -4,6 +4,7 @@ var browserSync = require('browser-sync').create();
 var cssmin = require('gulp-cssmin');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
+var uglify = require('gulp-uglifyjs');
 
 // Task to copy and minify bower components
 gulp.task('copy_bower_components', function() {
@@ -20,6 +21,20 @@ gulp.task('copy_bower_components', function() {
     .pipe(gulp.dest('./fonts/'));
 });
 
+// Task to uglify and concat js
+gulp.task('uglify', function() {
+  gulp.src(['bower_components/jquery/dist/jquery.js','js/scripts.js'])
+    .pipe(uglify('app.min.js', {
+      outSourceMap: true
+    }))
+    .pipe(gulp.dest('js'))
+});
+
+// Task to watch changes in javascript
+gulp.task('watch', function () {
+   gulp.watch('js/scripts.js', ['uglify']);
+});
+
 // Task for building blog when something changed:
 gulp.task('build', shell.task(['bundle exec jekyll build --watch']));
 // Or if you don't use bundle:
@@ -32,4 +47,4 @@ gulp.task('serve', function () {
     gulp.watch('_site/**/*.*').on('change', browserSync.reload);
 });
 
-gulp.task('default', ['copy_bower_components', 'build', 'serve']);
+gulp.task('default', ['copy_bower_components', 'uglify', 'build', 'watch', 'serve']);
