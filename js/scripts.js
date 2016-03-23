@@ -1,6 +1,8 @@
 $( document ).ready(function() {
 
-	/* SCROLL NAVIGATION */
+	/*
+		SCROLL NAVIGATION
+	*/
 
 	$('a[href^="#"]').on('click',function (e) {
 	    e.preventDefault();
@@ -15,6 +17,16 @@ $( document ).ready(function() {
 	    }, 500, 'swing', function () {
 	        window.location.hash = target;
 	    });
+	});
+
+	/*
+		MASONRY
+	*/
+
+	$('.references-list').imagesLoaded( function() {
+		$('.references-list').masonry({
+			itemSelector: '.references-list-item'
+		});
 	});
 
 });

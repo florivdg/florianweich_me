@@ -1,8 +1,57 @@
 ---
-layout: page
+layout: default
 title: "Referenzen"
 top-banner-id: refs
 subtitle: referenzen<span class="green">&amp;</span>projekte
 group: "main-menu"
 permalink: /referenzen/
 ---
+
+<section id="references-main">
+  <div class="container">
+    <ul class="references-list">
+      {% for ref in site.references %}
+      <li class="references-list-item">
+        {% if ref.link %}
+        <a href="{{ ref.link }}" target="_blank" rel="nofollow">
+        {% endif %}
+          <div class="references-list-box">
+            <div class="references-list-box-header">
+              <div class="top-border"></div>
+              <div class="img-wrapper">
+                <img src="{{ ref.image | prepend: "../../images/refs/" }}" alt="{{ ref.title }}" class="main">
+              </div>
+            </div>
+            <div class="references-list-box-body">
+              <div class="icon-circle"><img src="{{ ref.icon | prepend: "../../images/rounded_icons/" }}" alt="{{ ref.title }}"></div>
+              <h5>{{ ref.subtitle }}</h5>
+              <h4>{{ ref.title }}</h4>
+              <p>{{ ref.content }}</p>
+              <ul class="tag-icon-list">
+                {% for tag in ref.tags %}
+                {% assign tag_parts = tag | split: "|" %}
+                <li class="tag-icon-list-item">
+                  <span class="{{ tag_parts[1] }}">
+                    <div class="tooltip">{{ tag_parts[0] }}</div>
+                  </span>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        {% if ref.link %}
+        </a>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="code-separator">
+  <div class="container">
+    <span class="pre">&lt;?php</span> <span class="green">endforeach</span><span class="blue">;</span>
+  </div>
+</section>
+
+{% include contact.html %}
