@@ -1,7 +1,7 @@
 ---
 title: CodeKit
 type: Build Tool
-icon: code
+icon: devicons devicons-code
 color: ffaf3e
 ---
 

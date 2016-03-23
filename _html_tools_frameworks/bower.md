@@ -1,7 +1,7 @@
 ---
 title: Bower
 type: Package Manager
-icon: bower
+icon: devicons devicons-bower
 color: ffcc2f
 ---
 

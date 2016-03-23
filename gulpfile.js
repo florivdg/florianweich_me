@@ -23,7 +23,7 @@ gulp.task('copy_bower_components', function() {
 
 // Task to uglify and concat js
 gulp.task('uglify', function() {
-  gulp.src(['bower_components/jquery/dist/jquery.js','js/scripts.js'])
+  gulp.src(['bower_components/jquery/dist/jquery.js','bower_components/masonry/masonry.js','js/scripts.js'])
     .pipe(uglify('app.min.js', {
       outSourceMap: true
     }))

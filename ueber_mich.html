@@ -1,8 +1,113 @@
 ---
-layout: page
+layout: default
 title: "Über mich"
 top-banner-id: aboutme
 subtitle: übermich[<span class="green">vita, skills</span>]
 group: "main-menu"
 permalink: /uebermich/
 ---
+
+<section class="cards">
+  <div class="container">
+    <div class="row">
+      <div class="two-thirds">
+        <div class="card">
+          <div class="card-header wide" id="card-bg-01">
+            <div class="icon-circle">
+              <img src="../../images/rounded_icons/chat.svg" alt="Chat">
+            </div>
+          </div>
+          <div class="card-body">
+            <h4>Hallo, mein Name ist Florian</h4>
+            <div class="row">
+              <div class="half">
+                <p class="text-justify">
+                Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.<br>Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla.
+                </p>
+              </div>
+              <div class="half">
+                <p class="text-justify">
+                Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="thirds">
+        <div class="card transparent-bg">
+          <div class="card-header" id="card-bg-03">
+            <div class="icon-circle">
+              <img src="../../images/rounded_icons/camera.svg" alt="Kamera">
+            </div>
+          </div>
+          <div class="card-body fullsize-img">
+            <img src="../../images/florianweich_profile.jpg" alt="Florian Weich">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="code-separator">
+  <div class="container">
+    <span class="pre">class</span><span class="green">def</span> initialize(<span class="blue">me</span>)
+  </div>
+</section>
+
+<section class="dark-bg collection-section" id="educationcareer">
+  <div class="container">
+    <h3>ausbildung<span class="fine white">&amp;</span><span>laufbahn</span></h3>
+    <p class="intro-text">Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.</p>
+    <ul class="collection">
+      {% for education in site.education_career %}
+      <li class="collection-item">
+        <div class="collection-item-content">
+          <div class="collection-icon-wrapper" style="background: #{{ education.color }} url('../../images/collection-icon-bg.svg') no-repeat center top;">
+            <span class="{{ education.icon }}"></span>
+          </div>
+          <h5>{{ education.type }}</h5>
+          <h4>{{ education.title }}</h4>
+          <p>{{ education.content }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="code-separator">
+  <div class="container">
+    <span class="pre">git</span>commit <span class="blue">-m </span><span class="green">"init"</span>
+  </div>
+</section>
+
+<section class="dark-bg collection-section" id="skillslanguages">
+  <div class="container">
+    <h3>kenntnisse<span class="fine white">&amp;</span><span>sprachen</span></h3>
+    <p class="intro-text">Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.</p>
+    <ul class="collection">
+      {% for skill in site.skills_languages %}
+      <li class="collection-item">
+        <div class="collection-item-content">
+          <div class="collection-icon-wrapper" style="background: #{{ skill.color }} url('../../images/collection-icon-bg.svg') no-repeat center top;">
+            <span class="{{ skill.icon }}"></span>
+          </div>
+          <h5>{{ skill.type }}</h5>
+          <h4>{{ skill.title }}</h4>
+          <p>{{ skill.content }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="code-separator">
+  <div class="container">
+    <span class="pre">&amp;:hover{</span>color: <span class="green">$green</span><span class="blue">;</span>
+  </div>
+</section>
+
+{% include contact.html %}

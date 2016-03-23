@@ -1,7 +1,7 @@
 ---
 title: Atom
 type: Code Editor
-icon: atom
+icon: devicons devicons-atom
 color: 72acab
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Sublime
 type: Code Editor
-icon: sublime
+icon: devicons devicons-sublime
 color: f68102
 ---
 

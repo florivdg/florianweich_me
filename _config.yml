@@ -24,3 +24,5 @@ gems:
 exclude: [node_modules, gulpfile.js, bower_components, Gemfile, Gemfile.lock, package.json, js/scripts.js]
 collections:
   - html_tools_frameworks
+  - education_career
+  - skills_languages

@@ -65,7 +65,7 @@ devicons:
   </div>
 </section>
 
-<section class="dark-bg" id="toolsframeworks">
+<section class="dark-bg collection-section" id="toolsframeworks">
   <div class="container">
     <h3>tools<span class="fine white">&amp;</span><span>frameworks</span></h3>
     <p class="intro-text">Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.</p>
@@ -74,7 +74,7 @@ devicons:
       <li class="collection-item">
         <div class="collection-item-content">
           <div class="collection-icon-wrapper" style="background: #{{ tool.color }} url('../../images/collection-icon-bg.svg') no-repeat center top;">
-            <span class="devicons devicons-{{ tool.icon }}"></span>
+            <span class="{{ tool.icon }}"></span>
           </div>
           <h5>{{ tool.type }}</h5>
           <h4>{{ tool.title }}</h4>
@@ -88,7 +88,7 @@ devicons:
 
 <section class="code-separator">
   <div class="container">
-    <span class="pre">&amp;:after {</span>display: <span class="green">flex</span><span class="blue">;</span>
+    <span class="pre">&amp;:after{</span>display: <span class="green">flex</span><span class="blue">;</span>
   </div>
 </section>
 

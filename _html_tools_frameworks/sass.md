@@ -1,7 +1,7 @@
 ---
 title: SCSS/SASS
 type: Language
-icon: sass
+icon: devicons devicons-sass
 color: c6538c
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Bootstrap
 type: Framework
-icon: bootstrap
+icon: devicons devicons-bootstrap
 color: 5b4282
 ---
 

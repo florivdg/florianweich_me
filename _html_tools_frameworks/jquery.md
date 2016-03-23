@@ -1,7 +1,7 @@
 ---
 title: jQuery
 type: JavaScript Library
-icon: jquery
+icon: devicons devicons-jquery
 color: 0769ad
 ---
 
