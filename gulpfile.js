@@ -26,6 +26,9 @@ gulp.task('uglify', function() {
   gulp.src(['bower_components/jquery/dist/jquery.js',
             'bower_components/masonry/dist/masonry.pkgd.js',
             'bower_components/imagesloaded/imagesloaded.pkgd.js',
+            'js/modernizr.js',
+            'js/classie.js',
+            'js/AnimOnScroll.js',
             'js/scripts.js'])
     .pipe(uglify('app.min.js', {
       outSourceMap: true

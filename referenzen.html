@@ -9,9 +9,9 @@ permalink: /referenzen/
 
 <section id="references-main">
   <div class="container">
-    <ul class="references-list">
+    <ul class="references-list" id="references-list">
       {% for ref in site.references %}
-      <li class="references-list-item">
+      <li class="references-list-item animatable">
         {% if ref.link %}
         <a href="{{ ref.link }}" target="_blank" rel="nofollow">
         {% endif %}

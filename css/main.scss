@@ -536,6 +536,14 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 }
 
 // - - - - - - - - - - - - REFERENZEN - - - - - - - - - - - - //
+@-webkit-keyframes moveUp {
+	0% { }
+	100% { -webkit-transform: translateY(0); opacity: 1; }
+}
+@keyframes moveUp {
+	0% { }
+	100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
+}
 #references-main {
 	margin-top: -50px;
 	$refs-margin: 15px;
@@ -551,6 +559,14 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 			width: 33%;
 			padding: 0 $refs-margin;
 			margin-bottom: 2*$refs-margin;
+			opacity: 0;
+			&.animate {
+				transform: translateY(200px);
+				animation: moveUp 0.65s ease forwards;
+			}
+			&.shown {
+				opacity: 1!important;
+			}
 			a {
 				display: block;
 				&:hover {
