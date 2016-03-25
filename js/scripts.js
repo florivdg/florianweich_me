@@ -62,11 +62,11 @@ function detectMob ()
 function loadMasonry()
 {
  	/* Animated masonry images */
- 	if ( detectMob() == false) {
+ 	if ( detectMob() == false && $("#references-list").length > 0 ) {
 	 	new AnimOnScroll( document.getElementById( 'references-list' ), {
 			minDuration : 0.4,
 			maxDuration : 0.7,
-			viewportFactor : 0.4
+			viewportFactor : 0.2
 		} );
 	 }
 }

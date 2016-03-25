@@ -9,7 +9,7 @@ tags:
   - Illustrator|devicons devicons-illustrator
   - HTML5|devicons devicons-html5
   - CSS3|devicons devicons-css3
-  - JavaScript|devicons devicons-javascript_shield
+  - jQuery|devicons devicons-jquery
   - Jekyll|devicons devicons-jekyll_small
 ---
 

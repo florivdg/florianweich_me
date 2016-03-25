@@ -248,7 +248,9 @@ section.code-separator {
 $card-background-gradient: linear-gradient($color-gradient-start, $color-gradient-end);
 .card {
 	width: 100%;
-	float: left;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
   border-radius: $border-radius-card;
   background-color: $white;
   box-shadow: 0px 7px 23px 0px rgba(52, 52, 52, 0.4);
@@ -313,6 +315,9 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 		padding: 15px;
 		padding-bottom: 30px;
 		text-align: center;
+		display: flex;
+		flex-direction: column;
+		flex: 1;
 		h4 {
 			font-size: 1.6em;
 			font-weight: 500;
@@ -324,19 +329,12 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 			margin-bottom: 25px;
 		}
 		.btn {
-			margin: 10px 0;
+		  margin: 0 auto;
+		  display: inline-table;
 		}
 		&.fullsize-img {
 			padding: 0!important;
 			overflow: hidden;
-			background-color: transparent!important;
-			img {
-				width: 100%;
-				height: auto;
-				border-bottom-left-radius: $border-radius-card;
-				border-bottom-right-radius: $border-radius-card;
-				margin-bottom: -$border-radius-card/2;
-			}
 		}
 	}
 }
@@ -723,6 +721,15 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 			}
 		}
 	}
+}
+
+// - - - - - - - - - - - - ABOUT ME - - - - - - - - - - - - //
+#profile-image {
+	background-image: url({{ "../images/florianweich_profile.jpg" | prepend: site.baseurl }});
+	background-size: cover;
+	background-position: center;
+	border-bottom-left-radius: $border-radius-card;
+	border-bottom-right-radius: $border-radius-card;
 }
 
 // - - - - - - - - - - - - IMPRINT - - - - - - - - - - - - //

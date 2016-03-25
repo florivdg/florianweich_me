@@ -116,6 +116,10 @@ section.std-pad {
   @extend %clearfix;
   margin-left: -15px;
   margin-right: -15px;
+  &.flex {
+    display: flex;
+    flex-wrap: nowrap;
+  }
 }
 
 .half {
@@ -124,6 +128,10 @@ section.std-pad {
   float: left;
   position: relative;
   min-height: 1px;
+  &.flex {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .two-thirds {
@@ -132,6 +140,10 @@ section.std-pad {
   float:left;
   position: relative;
   min-height: 1px;
+  &.flex {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .thirds {
@@ -140,6 +152,10 @@ section.std-pad {
   float: left;
   position: relative;
   min-height: 1px;
+  &.flex {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 // - - - - - - - - - - - - BUTTONS - - - - - - - - - - - //
