@@ -23,12 +23,6 @@ $( document ).ready(function() {
 		MASONRY
 	*/
 
-	// $('.references-list').imagesLoaded( function() {
-	// 	$('.references-list').masonry({
-	// 		itemSelector: '.references-list-item'
-	// 	});
-	// });
-
 	loadMasonry();
 
 });

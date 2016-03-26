@@ -26,10 +26,10 @@ gulp.task('uglify', function() {
   gulp.src(['bower_components/jquery/dist/jquery.js',
             'bower_components/masonry/dist/masonry.pkgd.js',
             'bower_components/imagesloaded/imagesloaded.pkgd.js',
-            'js/modernizr.js',
-            'js/classie.js',
-            'js/AnimOnScroll.js',
-            'js/scripts.js'])
+            '_javascript/modernizr.js',
+            '_javascript/classie.js',
+            '_javascript/AnimOnScroll.js',
+            '_javascript/scripts.js'])
     .pipe(uglify('app.min.js', {
       outSourceMap: true
     }))
@@ -38,7 +38,7 @@ gulp.task('uglify', function() {
 
 // Task to watch changes in javascript
 gulp.task('watch', function () {
-   gulp.watch('js/scripts.js', ['uglify']);
+   gulp.watch('_javascript/scripts.js', ['uglify']);
 });
 
 // Task for building blog when something changed:
