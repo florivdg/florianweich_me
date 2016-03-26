@@ -735,6 +735,13 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 		h4 {
 			font-size: 1.4em;
 		}
+		a {
+			color: $color-bg-dark;
+			&:hover {
+				color: lighten($color-bg-dark-bright, 5%);
+				text-decoration: none;
+			}
+		}
 	}
 	.social-list {
 		@extend %clearfix;

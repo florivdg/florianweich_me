@@ -8,12 +8,9 @@
 # Site settings
 title: florianweich.me
 email: hallo@florianweich.me
-description: >
-  Florian Weich. Designer. Webentwickler.
+description: Florian Weich. Designer. Webentwickler. Programmierer
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://florianweich.me" # the base hostname & protocol for your site
-#twitter_username: florianweich
-#github_username:  florianweich
 
 # Build settings
 markdown: kramdown
