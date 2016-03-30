@@ -14,12 +14,10 @@
 	background-color: $white;
 	background-color: rgba(255, 255, 255, 0.95);
 	z-index: 999;
-		@media (min-width: $toast-breakpoint-medium) {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-	}
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 	.logo {
 		img {
 			width: 44px!important;
@@ -30,35 +28,40 @@
 	nav {
 		float:right;
 		padding: 6px 0;
-		font-weight: 500;
-		z-index: 500;
 		ul {
 			list-style: none;
 			/* MOBILE MENU */
 			@media (max-width: $toast-breakpoint-medium) {
 				display: block;
-				position: absolute;
+				position: fixed;
 				margin: 0;
 				padding: 0;
 				top: $height-navbar;
 				left: 0;
 				right: 0;
-				background-color: $white;
-				background-color: rgba(255, 255, 255, 0.95);
-				z-index: 998;
+				bottom: 0;
+				background-color: $color-bg-dark;
+				background-color: rgba(46, 52, 64, 0.98);
+				z-index: 800;
 				li {
 					float: none;
 					margin-left: 0!important;
 				}
-				$mobile-menu-item-padding: 12px;
+				$mobile-menu-item-padding: 14px;
 				a {
 					display: block;
-					padding: $mobile-menu-item-padding 20px;
+					padding: $mobile-menu-item-padding 40px;
 					transition: all $transition-time-standard ease-in-out;
+					color: $white;
 					&:hover:not(.no-link) {
 						background-color: $color-highlight;
 						background-color: rgba(190, 244, 26, .95);
 						color: $color-bg-dark;
+					}
+				}
+				.dropdown {
+					a.parent:after {
+						color: $white!important;
 					}
 				}
 				.dropdown-menu {
@@ -69,13 +72,19 @@
 					background-color: transparent!important;
 					padding-bottom: 0!important;
 					li a {
-						padding: $mobile-menu-item-padding 30px!important;
+						padding: $mobile-menu-item-padding 60px!important;
 					}
 				}
 			}
 		}
 		.no-link {
 			cursor: default;
+			&:hover {
+				color: $color-bg-dark;
+				@media (max-width: $toast-breakpoint-medium) {
+					color: $white;
+				}
+			}
 		}
 		#mobile-menu-btn {
 			margin-top: -6px;
@@ -94,7 +103,7 @@
 			float: left;
 			margin-left: 20px;
 		}
-		li.active-expanded a {
+		li.active-expanded a.parent {
 			@media (min-width: $toast-breakpoint-medium) {
 				font-weight: 600;
 			}
@@ -105,6 +114,10 @@
 		a {
 			text-decoration: none;
 			color: $color-bg-dark;
+			font-weight: 400;
+			@media (min-width: $toast-breakpoint-medium) {
+				font-weight: 500;
+			}
 			&:hover, &:active, &:focus {
 				text-decoration: none;
 				color: lighten($color-bg-dark-bright, 5%);
@@ -138,7 +151,6 @@
 					margin: 0;
 					a {
 						display: block;
-						font-weight: 500;
 						padding: 10px 25px;
 						transition: all $transition-time-standard ease-in-out;
 						&:hover {
@@ -299,6 +311,9 @@ footer {
 // - - - - - - - - - - - CODE SEPARATOR - - - - - - - - - - - //
 
 section.code-separator {
+	max-width: 100%;
+	overflow: hidden;
+	word-wrap: break-word;
 	padding: 90px 0;
 	font-family: "Source Code Pro", sans-serif;
 	font-weight: 600;
@@ -312,6 +327,10 @@ section.code-separator {
 		position: relative;
 		top: 8px;
 		margin-right: 20px;
+		@media (max-width: $toast-breakpoint-small) {
+			display: block;
+			margin-right: 0;
+		}
 		&.small {
 			font-size: 1.75em;
 			top:5px;
@@ -654,16 +673,9 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 }
 
 // - - - - - - - - - - - - REFERENZEN - - - - - - - - - - - - //
-@-webkit-keyframes moveUp {
-	0% { }
-	100% { -webkit-transform: translateY(0); opacity: 1; }
-}
-@keyframes moveUp {
-	0% { }
-	100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
-}
 #references-main {
 	margin-top: -50px;
+	overflow: hidden;
 	$refs-margin: 15px;
 	.references-list {
 		@extend %clearfix;
@@ -674,17 +686,15 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 		margin-right: -$refs-margin;
 		.references-list-item {
 			display: block;
-			width: 33%;
+			width: 33.33333%;
+			@media (max-width: $toast-breakpoint-medium) {
+				width: 50%;
+			}
+			@media (max-width: $toast-breakpoint-small) {
+				width: 100%;
+			}
 			padding: 0 $refs-margin;
 			margin-bottom: 2*$refs-margin;
-			opacity: 0;
-			&.animate {
-				transform: translateY(200px);
-				animation: moveUp 0.65s ease forwards;
-			}
-			&.shown {
-				opacity: 1!important;
-			}
 			a {
 				display: block;
 				&:hover {
@@ -716,16 +726,6 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 				}
 				.references-list-box-header {
 					.img-wrapper {
-						//position: relative;
-						&:after {
-							// content: " ";
-							// background-image: linear-gradient( rgba(25, 25, 25, 0), rgba(25, 25, 25, 0.4) );
-							// height: 25px;
-							// width: 100%;
-							// position: absolute;
-							// bottom: 0;
-							// z-index: 599;
-						}
 						img.main {
 							max-width: 100%;
 							height: auto;
@@ -965,18 +965,18 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 	}
 	.social-list {
 		@extend %clearfix;
-		display: inline-block;
+		text-align: center;
 		list-style: none;
 		margin: 0;
 		margin-top: 50px;
 		padding: 0;
 		li {
-			display: block;
+			display: inline-block;
 			border-radius: 50%;
 			background-color: $white;
 			color: $color-bg-dark;
-			float:left;
-			margin-left: 15px;
+			margin-left: 10px;
+			margin-bottom: 10px;
 			$social-size: 50px;
 			width: $social-size;
 			height: $social-size;
@@ -999,13 +999,16 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 		}
 	}
 }
+#thanks-section {
+	padding: $padding-section 0;
+	.lead {
+		font-size: 19px;
+		text-align: center;
+	}
+}
 #thanks {
 	.container {
 		padding-top: 55px;
 		height: 200px;
-	}
-	.lead {
-		font-size: 19px;
-		text-align: center;
 	}
 }

@@ -10,9 +10,7 @@ body {
   background-color: $color-bg-dark-bright;
   color: $color-text;
 
-  @media (min-width: $toast-breakpoint-medium) {
-    padding-top: $height-navbar;
-  }
+  padding-top: $height-navbar; // sticky navbar
 }
 
 h3 {
@@ -59,8 +57,10 @@ a {
   text-align: justify;
 }
 
-.hidden {
-  display: none!important;
+.hidden-mobile {
+  @media (max-width: $toast-breakpoint-medium) {
+    display: none!important;
+  }
 }
 
 // - - - - - - - - - - - MIXINS - - - - - - - - - - - //

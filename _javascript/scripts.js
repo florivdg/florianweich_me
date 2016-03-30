@@ -23,6 +23,12 @@ $( document ).ready(function() {
 
 	    if ($target.length == 0) return;
 
+      // Hide mobile nav if shown
+      var $mainNav = $("#main-nav");
+      if ( $mainNav.hasClass("shown") ) {
+    		$mainNav.removeClass("shown").animateCss("fadeOutLeftBig", "hidden-mobile");
+    	}
+
 	    $('html, body').stop().animate({
 	        'scrollTop': $target.offset().top
 	    }, 500, 'swing', function () {
@@ -40,41 +46,17 @@ $( document ).ready(function() {
 
 
 /*
-	Detect mobile device
-*/
-
-function detectMob ()
-{
-	if( navigator.userAgent.match(/Android/i)
-		|| navigator.userAgent.match(/webOS/i)
-		|| navigator.userAgent.match(/iPhone/i)
-		|| navigator.userAgent.match(/iPad/i)
-		|| navigator.userAgent.match(/iPod/i)
-		|| navigator.userAgent.match(/BlackBerry/i)
-		|| navigator.userAgent.match(/Windows Phone/i)
-	){
-		return true;
-	}
-	else {
-		return false;
-	}
-}
-
-/*
 	LOAD REFS MASONRY
 */
 
-function loadMasonry()
-{
- 	/* Animated masonry images */
- 	if ( detectMob() == false && $("#references-list").length > 0 ) {
-	 	new AnimOnScroll( document.getElementById( 'references-list' ), {
-			minDuration : 0.4,
-			maxDuration : 0.7,
-			viewportFactor : 0.2
-		} );
-	 }
+function loadMasonry() {
+  $('.references-list').imagesLoaded( function() {
+		$('.references-list').masonry({
+			itemSelector: '.references-list-item'
+		});
+	});
 }
+
 
 /*
   DROPDOWN MENU
@@ -90,6 +72,11 @@ if ( $( document ).width() > toast_breakpoint_medium) {
 	  $('.dropdown .dropdown-menu').show();
 	});
 
+  $('.dropdown').click(function() {
+    $('.dropdown-menu').show();
+    event.stopPropagation();
+  });
+
 	$('.dropdown-menu').mouseleave(function() {
 	  $(this).hide();
 	});
@@ -104,12 +91,20 @@ if ( $( document ).width() > toast_breakpoint_medium) {
 
 }
 
-$("#mobile-menu-btn").click(function() {
-	if ( $(".main-nav").hasClass("animated") ) { return; }
+/*
+  MOBILE MENU
+*/
 
-	if ( $(".main-nav").hasClass("shown") ) {
-		$(".main-nav").removeClass("shown").animateCss("fadeOutUpBig", "hidden");
+$("#mobile-menu-btn").click(function() {
+
+  var $mainNav = $("#main-nav");
+
+	if ( $mainNav.hasClass("animated") ) { return; }
+
+	if ( $mainNav.hasClass("shown") ) {
+		$mainNav.removeClass("shown").animateCss("fadeOutLeftBig", "hidden-mobile");
 	} else {
-		$(".main-nav").removeClass("hidden").animateCss("bounceInDown", "shown");
+		$mainNav.removeClass("hidden-mobile").animateCss("bounceInLeft", "shown");
 	}
+
 });
