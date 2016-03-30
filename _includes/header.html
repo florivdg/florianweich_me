@@ -16,9 +16,9 @@
           <a href="{{ "/kenntnisse/" | prepend: site.baseurl }}" class="parent no-link">Kenntnisse</a>
           <ul class="dropdown-menu">
             <li class="{% if page.url == '/kenntnisse/frontend/' %}active{% endif %}"><a href="{{ "/kenntnisse/frontend/" | prepend: site.baseurl }}">Frontend</a></li>
-            <li class="{% if page.url == '/kenntnisse/wordpress/' %}active{% endif %}"><a href="{{ "/kenntnisse/wordpress/" | prepend: site.baseurl }}">Wordpress</a></li>
             <li class="{% if page.url == '/kenntnisse/rails/' %}active{% endif %}"><a href="{{ "/kenntnisse/rails/" | prepend: site.baseurl }}">Ruby on Rails</a></li>
             <li class="{% if page.url == '/kenntnisse/apps/' %}active{% endif %}"><a href="{{ "/kenntnisse/apps/" | prepend: site.baseurl }}">Apps</a></li>
+            <li class="{% if page.url == '/kenntnisse/wordpress/' %}active{% endif %}"><a href="{{ "/kenntnisse/wordpress/" | prepend: site.baseurl }}">Wordpress</a></li>
           </ul>
         </li>
         {% assign pages_list = site.pages %}

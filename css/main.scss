@@ -208,49 +208,60 @@
 		height: 450px;
 		overflow: hidden;
 	}
-	&#home {
+	&#home, &#thanks {
 		.container {
-			background: $color-bg-dark url("../images/top-banner_img_home.png") no-repeat right bottom;
-			@include retina {
-				background: $color-bg-dark url("../images/top-banner_img_home@2x.png") no-repeat right bottom;
-				background-size: 673px auto;
-			}
+			background: $color-bg-dark url("../images/top-banner_img_home.svg") no-repeat;
+			background-position: right 50px;
+			background-size: auto 450px;
 		}
 	}
-	&#skills {
+	&#frontend {
 		.container {
-			background: $color-bg-dark url("../images/top-banner_img_skills.png") no-repeat right bottom;
-			@include retina {
-				background: $color-bg-dark url("../images/top-banner_img_skills@2x.png") no-repeat right bottom;
-				background-size: 821px auto;
-			}
+			background: $color-bg-dark url("../images/top-banner_img_frontend.svg") no-repeat;
+			background-position: right 50px;
+			background-size: auto 450px;
+		}
+	}
+	&#rails {
+		.container {
+			background: $color-bg-dark url("../images/top-banner_img_rails.svg") no-repeat;
+			background-position: right 50px;
+			background-size: auto 450px;
+		}
+	}
+	&#apps {
+		.container {
+			background: $color-bg-dark url("../images/top-banner_img_apps.svg") no-repeat;
+			background-position: right 50px;
+			background-size: auto 450px;
+		}
+	}
+	&#wordpress {
+		.container {
+			background: $color-bg-dark url("../images/top-banner_img_wordpress.svg") no-repeat;
+			background-position: right 50px;
+			background-size: auto 450px;
 		}
 	}
 	&#refs {
 		.container {
-			background: $color-bg-dark url("../images/top-banner_img_refs.png") no-repeat right bottom;
-			@include retina {
-				background: $color-bg-dark url("../images/top-banner_img_refs@2x.png") no-repeat right bottom;
-				background-size: 651px auto;
-			}
+			background: $color-bg-dark url("../images/top-banner_img_refs.svg") no-repeat;
+			background-position: right 50px;
+			background-size: auto 450px;
 		}
 	}
 	&#aboutme {
 		.container {
-			background: $color-bg-dark url("../images/top-banner_img_aboutme.png") no-repeat right bottom;
-			@include retina {
-				background: $color-bg-dark url("../images/top-banner_img_aboutme@2x.png") no-repeat right bottom;
-				background-size: 688px auto;
-			}
+			background: $color-bg-dark url("../images/top-banner_img_aboutme.svg") no-repeat;
+			background-position: right bottom;
+			background-size: auto 450px;
 		}
 	}
 	&#legal {
 		.container {
-			background: $color-bg-dark url("../images/top-banner_img_legal.png") no-repeat right bottom;
-			@include retina {
-				background: $color-bg-dark url("../images/top-banner_img_legal@2x.png") no-repeat right bottom;
-				background-size: 672px auto;
-			}
+			background: $color-bg-dark url("../images/top-banner_img_legal.svg") no-repeat;
+			background-position: right bottom;
+			background-size: auto 450px;
 		}
 	}
 }
@@ -350,7 +361,6 @@ section.code-separator {
 	margin-top: -50px;
 	z-index: 50;
 }
-$card-background-gradient: linear-gradient($color-gradient-start, $color-gradient-end);
 .card {
 	width: 100%;
   border-radius: $border-radius-card;
@@ -365,32 +375,25 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 		}
 	}
 	.card-header {
-		background-color: $color-gradient-start;
-		background-image: $card-background-gradient;
+		background-color: $color-highlight;
 		height: 100px;
 		border-top-left-radius: $border-radius-card;
 		border-top-right-radius: $border-radius-card;
 		background-repeat: repeat-x!important;
 		&#card-bg-01 {
-			background: url("../images/bg_card_01.png") no-repeat, $card-background-gradient;
-			@include retina {
-				background: url("../images/bg_card_01@2x.png") no-repeat, $card-background-gradient;
-				background-size: 350px 100px;
-			}
+			background: $color-highlight url("../images/top-banner_img_legal.svg") no-repeat;
+			background-position: left center;
+			background-size: 350px auto;
 		}
 		&#card-bg-02 {
-			background: url("../images/bg_card_02.png") no-repeat, $card-background-gradient;
-			@include retina {
-				background: url("../images/bg_card_02@2x.png") no-repeat, $card-background-gradient;
-				background-size: 350px 100px;
-			}
+			background: $color-highlight url("../images/top-banner_img_rails.svg") no-repeat;
+			background-position: left center;
+			background-size: 350px auto;
 		}
 		&#card-bg-03 {
-			background: url("../images/bg_card_03.png") no-repeat, $card-background-gradient;
-			@include retina {
-				background: url("../images/bg_card_03@2x.png") no-repeat, $card-background-gradient;
-				background-size: 350px 100px;
-			}
+			background: $color-highlight url("../images/top-banner_img_apps.svg") no-repeat;
+			background-position: left center;
+			background-size: 350px auto;
 		}
 		.icon-circle {
 		  border-radius: 50%;
@@ -641,7 +644,7 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
   			box-shadow: 2px 2px 10px 1px rgba(52, 52, 52, 0.4);
 				border: 6px $white solid;
 				text-align: center;
-				background-size: $collection-item-height*0.9!important;
+				background-size: 200px auto!important;
 				span {
 					color: $white;
 				}
@@ -675,8 +678,10 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 // - - - - - - - - - - - - REFERENZEN - - - - - - - - - - - - //
 #references-main {
 	margin-top: -50px;
-	overflow: hidden;
 	$refs-margin: 15px;
+	@media (max-width: $toast-breakpoint-medium) {
+		overflow: hidden;
+	}
 	.references-list {
 		@extend %clearfix;
 		margin: 0;
@@ -714,12 +719,9 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 				transition: transform $transition-time-standard ease-in-out, box-shadow $transition-time-standard ease-in-out;
 				z-index: 250;
 				.top-border {
-					background: url("../images/bg_card_01.png") repeat-x, $card-background-gradient;
-					background-position: center -48px;
-					@include retina {
-						background: url("../images/bg_card_01@2x.png") repeat-x, $card-background-gradient;
-						background-size: 350px 100px;
-					}
+					background: $color-highlight url("../images/top-banner_img_home.svg") repeat-x;
+					background-position: center;
+					background-size: 300px auto;
 					height: 13px;
 					border-top-left-radius: $border-radius-card;
 					border-top-right-radius: $border-radius-card;
