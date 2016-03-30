@@ -9,6 +9,10 @@ body {
 
   background-color: $color-bg-dark-bright;
   color: $color-text;
+
+  @media (min-width: $toast-breakpoint-medium) {
+    padding-top: $height-navbar;
+  }
 }
 
 h3 {
@@ -53,6 +57,10 @@ a {
 
 .text-justify {
   text-align: justify;
+}
+
+.hidden {
+  display: none!important;
 }
 
 // - - - - - - - - - - - MIXINS - - - - - - - - - - - //
@@ -102,44 +110,18 @@ html, body {
   margin-bottom: -$height-footer;
 }
 
-footer, .push {
+footer {
+  @media (min-width: $toast-breakpoint-medium) {
+    height: $height-footer;
+  }
+}
+
+.push {
   height: $height-footer;
 }
 
 section.std-pad {
   padding: $padding-section 0;
-}
-
-// - - - - - - - - - - - - GRID - - - - - - - - - - - //
-
-.row {
-  @extend %clearfix;
-  margin-left: -15px;
-  margin-right: -15px;
-}
-
-.half {
-  width: 50%;
-  padding: 0 15px;
-  float: left;
-  position: relative;
-  min-height: 1px;
-}
-
-.two-thirds {
-  width: 66.666%;
-  padding: 0 15px;
-  float:left;
-  position: relative;
-  min-height: 1px;
-}
-
-.thirds {
-  width: 33.333%;
-  padding: 0 15px;
-  float: left;
-  position: relative;
-  min-height: 1px;
 }
 
 // - - - - - - - - - - - - BUTTONS - - - - - - - - - - - //

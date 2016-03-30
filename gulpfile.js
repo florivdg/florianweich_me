@@ -11,7 +11,8 @@ gulp.task('copy_bower_components', function() {
   gulp.src(
     ['bower_components/normalize-css/normalize.css',
     'bower_components/devicons/css/devicons.css',
-    'bower_components/font-awesome/css/font-awesome.css'])
+    'bower_components/font-awesome/css/font-awesome.css',
+    'bower_components/animate.css/animate.css'])
     .pipe(concat('vendor.css'))
 		.pipe(cssmin())
 		.pipe(gulp.dest('./css/'));

@@ -3,23 +3,30 @@
     <h3><span class="bold white">sagen</span>sie<span>hallo</span></h3>
     <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
     <form method="POST" id="contactform">
+
+      <input type="text" name="_gotcha" style="display:none">
+      <input type="hidden" name="_next" value="{{ "/danke/" | prepend: site.url }}">
+      <input type="hidden" name="_subject" value="Neue Nachricht via florianweich.me">
+
       <fieldset>
         <div class="row">
-          <div class="half">
+          <div class="col col--6-of-12">
             <input type="text" name="name" value="" placeholder="Name" required="required">
           </div>
-          <div class="half">
+          <div class="col col--6-of-12">
             <input type="email" name="_replyto" value="" placeholder="E-Mail" required="required">
           </div>
         </div>
-
-        <textarea name="message" rows="8" placeholder="Nachricht" required="required"></textarea>
-
-        <input type="text" name="_gotcha" style="display:none">
-        <input type="hidden" name="_next" value="{{ "/danke/" | prepend: site.url }}">
-        <input type="hidden" name="_subject" value="Neue Nachricht via florianweich.me">
-        <button type="submit" class="btn btn-white">Senden</button>
-
+        <div class="row">
+          <div class="col col--12-of-12">
+            <textarea name="message" rows="8" placeholder="Nachricht" required="required"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col--12-of-12">
+            <button type="submit" class="btn btn-white">Senden</button>
+          </div>
+        </div>
       </fieldset>
     </form>
     <script>

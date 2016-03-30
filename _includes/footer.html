@@ -1,14 +1,14 @@
 <footer>
   <div class="container">
-    <div class="copyright">
-      <p>&copy; 2016 Florian Weich. Alle Rechte vorbehalten.</p>
-    </div>
     <div class="footer-navigation">
       <ul>
-        {% assign pages_list = site.pages %}
+        {% assign pages_list = site.pages | sort: 'order' %}
         {% assign group = 'footer-menu' %}
         {% include pages_list.html %}
       </ul>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2016 Florian Weich. Alle Rechte vorbehalten.</p>
     </div>
   </div>
 </footer>

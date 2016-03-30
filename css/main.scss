@@ -4,7 +4,7 @@
 
 // - - - - - - - - - - - - - IMPORTS - - - - - - - - - - - - - //
 
-@import "variables", "base";
+@import "variables", "grid", "base";
 
 // - - - - - - - - - - - - NAVIGATION - - - - - - - - - - - - //
 
@@ -12,7 +12,14 @@
 	@extend %clearfix;
 	height: $height-navbar;
 	background-color: $white;
-
+	background-color: rgba(255, 255, 255, 0.95);
+	z-index: 999;
+		@media (min-width: $toast-breakpoint-medium) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
 	.logo {
 		img {
 			width: 44px!important;
@@ -20,7 +27,6 @@
 			margin-top: 15px;
 		}
 	}
-
 	nav {
 		float:right;
 		padding: 6px 0;
@@ -28,13 +34,73 @@
 		z-index: 500;
 		ul {
 			list-style: none;
+			/* MOBILE MENU */
+			@media (max-width: $toast-breakpoint-medium) {
+				display: block;
+				position: absolute;
+				margin: 0;
+				padding: 0;
+				top: $height-navbar;
+				left: 0;
+				right: 0;
+				background-color: $white;
+				background-color: rgba(255, 255, 255, 0.95);
+				z-index: 998;
+				li {
+					float: none;
+					margin-left: 0!important;
+				}
+				$mobile-menu-item-padding: 12px;
+				a {
+					display: block;
+					padding: $mobile-menu-item-padding 20px;
+					transition: all $transition-time-standard ease-in-out;
+					&:hover:not(.no-link) {
+						background-color: $color-highlight;
+						background-color: rgba(190, 244, 26, .95);
+						color: $color-bg-dark;
+					}
+				}
+				.dropdown-menu {
+					position: relative!important;
+					top: 0!important;
+					display: block!important;
+					transform: translateX(0)!important;
+					background-color: transparent!important;
+					padding-bottom: 0!important;
+					li a {
+						padding: $mobile-menu-item-padding 30px!important;
+					}
+				}
+			}
+		}
+		.no-link {
+			cursor: default;
+		}
+		#mobile-menu-btn {
+			margin-top: -6px;
+			padding-right: 15px;
+			cursor: pointer;
+			.fa {
+				color: $color-bg-dark;
+				font-size: 26px;
+				line-height: $height-navbar;
+			}
+			@media (min-width: $toast-breakpoint-medium) {
+				display: none;
+			}
 		}
 		li {
 			float: left;
 			margin-left: 20px;
 		}
+		li.active-expanded a {
+			@media (min-width: $toast-breakpoint-medium) {
+				font-weight: 600;
+			}
+		}
 		li.active a {
-			font-weight: 600;
+			font-weight: 600!important;
 		}
 		a {
 			text-decoration: none;
@@ -60,6 +126,7 @@
 				transform: translateX(-25px);
 				z-index: 450;
 				background-color: $white;
+				background-color: rgba(255, 255, 255, 0.95);
 				color: $color-bg-dark;
 				margin: 0;
 				padding: 0;
@@ -76,6 +143,7 @@
 						transition: all $transition-time-standard ease-in-out;
 						&:hover {
 							background-color: $color-highlight;
+							background-color: rgba(190, 244, 26, .95);
 							color: $color-bg-dark;
 						}
 					}
@@ -126,6 +194,7 @@
 	.container {
 		padding-top: 128px;
 		height: 450px;
+		overflow: hidden;
 	}
 	&#home {
 		.container {
@@ -186,15 +255,32 @@ footer {
 	.copyright {
 		width: 50%;
 		float:left;
+		@media (max-width: $toast-breakpoint-medium) {
+			width: 100%;
+			text-align: center;
+		}
 	}
 	.footer-navigation {
 		width: 50%;
 		float: right;
+		@media (max-width: $toast-breakpoint-medium) {
+			width: 100%;
+			text-align: center;
+		}
 		ul {
+			@extend %clearfix;
 			padding: 0;
+			@media (max-width: $toast-breakpoint-medium) {
+				display: inline-block;
+			}
 		}
 		li {
-			float: right;
+			@media (max-width: $toast-breakpoint-medium) {
+				padding: 6px 0;
+			}
+			@media (min-width: $toast-breakpoint-medium) {
+				float: right;
+			}
 			list-style: none;
 			padding-left: 16px;
 		}
@@ -253,15 +339,19 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
   box-shadow: 0px 7px 23px 0px rgba(52, 52, 52, 0.4);
   z-index: 100;
 	color: $color-bg-dark;
+	@media (max-width: $toast-breakpoint-medium) {
+		margin-bottom: 75px;
+		&.last {
+			margin-bottom: 0;
+		}
+	}
 	.card-header {
 		background-color: $color-gradient-start;
 		background-image: $card-background-gradient;
 		height: 100px;
 		border-top-left-radius: $border-radius-card;
 		border-top-right-radius: $border-radius-card;
-		&.wide {
-			background-repeat: repeat-x!important;
-		}
+		background-repeat: repeat-x!important;
 		&#card-bg-01 {
 			background: url("../images/bg_card_01.png") no-repeat, $card-background-gradient;
 			@include retina {
@@ -328,6 +418,15 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 		&.fullsize-img {
 			padding: 0!important;
 			overflow: hidden;
+		}
+	}
+}
+
+#home-cards {
+	.card {
+		min-height: 312px;
+		@media (max-width: $toast-breakpoint-medium) {
+			min-height: 1px;
 		}
 	}
 }
@@ -405,19 +504,43 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 
 // - - - - - - - - - - - - SKILLS - - - - - - - - - - - - //
 
+#skills-cards {
+	.card {
+		min-height: 455px;
+	}
+}
+
 .badge-list {
 	@extend %clearfix;
 	list-style: none;
-	width: 100%;
 	margin: 0;
+	padding: 0;
+	display: inline-block;
+	display: flex;
+	flex-wrap: nowrap;
+	@media (max-width: $toast-breakpoint-small) {
+		display: block;
+	}
 	.badge-item {
 		width: 33.333%;
-		margin: 0 auto;
 		float: left;
+		padding: 0 15px;
+		display: flex;
+		justify-content: space-around;
+		@media (max-width: $toast-breakpoint-medium) {
+			padding: 0 10px;
+		}
+		@media (max-width: $toast-breakpoint-small) {
+			display: block;
+			width: 100%;
+			text-align: center;
+			padding: 15px 0;
+		}
 		.badge-frame {
 		  border-radius: $border-radius-card;
 		  background-color: $color-bg-dark-bright;
 		  box-shadow: inset 0px 3px 15px 0px rgba(24, 25, 24, 0.5);
+			display: inline-block;
 		  width: 158px;
 		  height: 200px;
 			img {
@@ -473,6 +596,9 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 		$distance-bottom: 10px;
 		height: $collection-item-height + 2 * $distance-bottom;
 		padding: $distance-bottom 15px;
+		@media (max-width: $toast-breakpoint-medium) {
+			width: 100%;
+		}
 		.collection-item-content {
 			@extend %clearfix;
 			min-height: 100%;
@@ -485,6 +611,7 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 			border-bottom-left-radius: $collection-item-height/2;
 			text-align: left;
 			padding-right: 15px;
+			overflow: hidden;
 			.collection-icon-wrapper {
 				float: left;
 				width: $collection-item-height;
@@ -565,7 +692,7 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 					.references-list-box {
 						transform: scale(1.03);
 						box-shadow: 0px 30px 35px 0px rgba(25, 25, 25, 0.5);
-						z-index: 999;
+						z-index: 998;
 					}
 				}
 			}
@@ -717,6 +844,14 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 }
 
 // - - - - - - - - - - - - ABOUT ME - - - - - - - - - - - - //
+#aboutme-cards {
+	.card {
+		min-height: 400px;
+		.card-body {
+			padding: 15px 30px;
+		}
+	}
+}
 #profile-image {
 	background-image: url({{ "../images/florianweich_profile.jpg" | prepend: site.baseurl }});
 	height: 300px;
@@ -729,6 +864,7 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 // - - - - - - - - - - - - IMPRINT - - - - - - - - - - - - //
 #imprint {
 	.card .card-body {
+		padding-bottom: 10px;
 		p, h4 {
 			text-align: left;
 		}
@@ -743,12 +879,15 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 			}
 		}
 	}
+	.card {
+		min-height: 410px;
+	}
 	.social-list {
 		@extend %clearfix;
 		display: inline-block;
 		list-style: none;
 		margin: 0 auto;
-		margin-top: 10px;
+		margin-top: 15px;
 		padding: 0;
 		li {
 			display: block;
@@ -813,6 +952,7 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 		margin: 0 auto;
 		input {
 			width: 100%;
+			margin-top: 10px;
 		}
 		textarea {
 			margin-top: 10px;
@@ -860,6 +1000,10 @@ $card-background-gradient: linear-gradient($color-gradient-start, $color-gradien
 	}
 }
 #thanks {
+	.container {
+		padding-top: 55px;
+		height: 200px;
+	}
 	.lead {
 		font-size: 19px;
 		text-align: center;
