@@ -27,6 +27,12 @@ $( document ).ready(function() {
 
 	    if ($target.length === 0) return;
 
+      // Disable scroll ANIMATIONS
+      console.log(target);
+      if (target == "#kontakt") {
+        $target.find("#contactform, .social-list").addClass("in-view visible");
+      }
+
       // Hide mobile nav if shown
       var $mainNav = $("#main-nav");
       if ( $mainNav.hasClass("shown") ) {
@@ -35,7 +41,7 @@ $( document ).ready(function() {
 
 	    $('html, body').stop().animate({
 	        'scrollTop': $target.offset().top
-	    }, 500, 'swing', function () {
+	    }, 400, 'swing', function () {
 	        window.location.hash = target;
 	    });
 	});
@@ -168,7 +174,7 @@ $("#mobile-menu-btn").click(function() {
   ANIMATE COLLECTION ITEMS ON SCROLL
 */
 
-var $animation_elements = $('.collection-item');
+var $animation_elements = $('.collection-item, #contactform, #kontakt .social-list');
 var $window = $(window);
 
 function check_if_in_view() {
