@@ -2,7 +2,7 @@
 title: Quadranto
 subtitle: App
 image: quadranto.jpg
-icon: smartphone.svg
+icon: apple.svg
 link:
 tags:
   - Photoshop|devicons devicons-photoshop

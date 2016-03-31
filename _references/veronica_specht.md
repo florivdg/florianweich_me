@@ -2,7 +2,7 @@
 title: Veronica Specht
 subtitle: Homepage
 image: veronica_specht.jpg
-icon: coding-html.svg
+icon: html5.svg
 link: http://www.veronica-specht.de
 tags:
   - HTML5|devicons devicons-html5

@@ -2,7 +2,7 @@
 title: florianweich.me
 subtitle: Homepage
 image: florianweich.jpg
-icon: coding-html.svg
+icon: html5.svg
 link: http://www.florianweich.me
 tags:
   - Photoshop|devicons devicons-photoshop

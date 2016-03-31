@@ -2,7 +2,7 @@
 title: Mein Lebensstein
 subtitle: Homepage
 image: lebensstein.jpg
-icon: coding-html.svg
+icon: html5.svg
 link: http://www.mein-lebensstein.de
 tags:
   - Photoshop|devicons devicons-photoshop

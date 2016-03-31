@@ -2,7 +2,7 @@
 title: Auftrag123.de
 subtitle: Dienstleistungs-Portal
 image: auftrag123.jpg
-icon: ruby.svg
+icon: rails.svg
 link: http://www.auftrag123.de
 tags:
   - Photoshop|devicons devicons-photoshop
