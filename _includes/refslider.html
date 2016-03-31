@@ -1,0 +1,11 @@
+<div class="ms-caro3d-template">
+  <!-- masterslider -->
+  <div class="master-slider ms-skin-default" id="masterslider">
+    {% for ref in site.references limit:5 %}
+    <div class="ms-slide">
+      <img src="{{ ref.image | prepend: "../../images/refs/" }}" data-src="{{ ref.image | prepend: "../../images/refs/" }}" alt="{{ ref.title }}"/>
+    </div>
+    {% endfor %}
+  </div>
+  <!-- end of masterslider -->
+</div>

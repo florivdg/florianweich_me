@@ -12,7 +12,9 @@ gulp.task('copy_bower_components', function() {
     ['bower_components/normalize-css/normalize.css',
     'bower_components/devicons/css/devicons.css',
     'bower_components/font-awesome/css/font-awesome.css',
-    'bower_components/animate.css/animate.css'])
+    'bower_components/animate.css/animate.css',
+    '_css/masterslider.css',
+    '_css/masterslider.default.css'])
     .pipe(concat('vendor.css'))
 		.pipe(cssmin())
 		.pipe(gulp.dest('./css/'));
@@ -20,6 +22,9 @@ gulp.task('copy_bower_components', function() {
     ['bower_components/devicons/fonts/*.*',
     'bower_components/font-awesome/fonts/*.*'])
     .pipe(gulp.dest('./fonts/'));
+  gulp.src(
+    ['_css/masterslider/*.*'])
+    .pipe(gulp.dest('./css/'));
 });
 
 // Task to uglify and concat js
@@ -31,6 +36,12 @@ gulp.task('uglify', function() {
             'bower_components/parsleyjs/dist/parsley.js',
             '_javascript/scripts.js'])
     .pipe(uglify('app.min.js', {
+      outSourceMap: true
+    }))
+    .pipe(gulp.dest('js'));
+  gulp.src(['_javascript/jquery.easing.min.js',
+            '_javascript/masterslider.js'])
+    .pipe(uglify('masterslider.min.js', {
       outSourceMap: true
     }))
     .pipe(gulp.dest('js'));
