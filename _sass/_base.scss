@@ -1,3 +1,38 @@
+// - - - - - - - - - - - MIXINS - - - - - - - - - - - //
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin retina {
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin word-wrap() {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+@mixin ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 // - - - - - - - - - - - - - FONTS & TEXT - - - - - - - - - - - - - //
 
 body {
@@ -11,6 +46,10 @@ body {
   color: $color-text;
 
   padding-top: $height-navbar; // sticky navbar
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include word-wrap();
 }
 
 h3 {
@@ -60,28 +99,6 @@ a {
 .hidden-mobile {
   @media (max-width: $toast-breakpoint-medium) {
     display: none!important;
-  }
-}
-
-// - - - - - - - - - - - MIXINS - - - - - - - - - - - //
-
-%clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
-@mixin retina {
-  @media
-    only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min--moz-device-pixel-ratio: 2),
-    only screen and (-o-min-device-pixel-ratio: 2/1),
-    only screen and (min-device-pixel-ratio: 2),
-    only screen and (min-resolution: 192dpi),
-    only screen and (min-resolution: 2dppx) {
-    @content;
   }
 }
 
