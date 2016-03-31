@@ -71,7 +71,11 @@ devicons:
       <li class="collection-item">
         <div class="collection-item-content">
           <div class="collection-icon-wrapper" style="background: #{{ tool.color }} url('../../images/top-banner_img_legal.svg') no-repeat center center;">
+            {% if tool.icon %}
             <span class="{{ tool.icon }}"></span>
+            {% elsif tool.icon_img %}
+            <img src="{{ tool.icon_img | prepend: "../../images/collection-icons/" }}" alt="{{ tool.title }}" class="collection-item-icon-image">
+            {% endif %}
           </div>
           <h5>{{ tool.type }}</h5>
           <h4>{{ tool.title }}</h4>

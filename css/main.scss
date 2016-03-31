@@ -687,6 +687,24 @@ section.code-separator {
 					line-height: 112px;
 					font-size: 2.75em;
 				}
+				.collection-item-icon-image {
+			    width: 50%;
+			    height: auto;
+			    margin-top: 50%;
+			    transform: translateY(-50%);
+					&[src*="osx"] {
+    				width: 33%;
+					}
+					&[src*="tvos"] {
+    				width: 60%;
+					}
+					&[src*="watchos"] {
+    				width: 80%;
+					}
+					&[src*="xcode"] {
+    				width: 35%;
+					}
+				}
 			}
 			h5 {
 				text-transform: uppercase;
@@ -710,9 +728,6 @@ section.code-separator {
 #references-main {
 	margin-top: -50px;
 	$refs-margin: 15px;
-	@media (max-width: $toast-breakpoint-medium) {
-		overflow: hidden;
-	}
 	.references-list {
 		@extend %clearfix;
 		margin: 0;
@@ -1030,6 +1045,16 @@ section.code-separator {
 					color: $white;
 				}
 			}
+		}
+	}
+	.parsley-errors-list.filled {
+		list-style: none;
+		text-align: left;
+		padding: 0;
+		margin: 5px 0 10px 0;
+		li {
+			font-weight: 500;
+			color: #ff5050;
 		}
 	}
 }

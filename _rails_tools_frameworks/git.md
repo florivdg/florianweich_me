@@ -1,7 +1,7 @@
 ---
 title: Git
 type: Version control
-icon: devicons devicons-git
+icon: devicons devicons-git_branch
 color: f44d27
 ---
 

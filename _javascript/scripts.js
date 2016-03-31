@@ -25,7 +25,7 @@ $( document ).ready(function() {
 	    var target = this.hash;
 	    var $target = $(target);
 
-	    if ($target.length == 0) return;
+	    if ($target.length === 0) return;
 
       // Hide mobile nav if shown
       var $mainNav = $("#main-nav");
@@ -50,7 +50,17 @@ $( document ).ready(function() {
     CARD ANI
   */
 
-  animateCards();
+  if (isMobile.any === true) {
+    showCards();
+  } else {
+    animateCards();
+  }
+
+  /*
+    FORM VALIDATION
+  */
+
+  $('#contactform').parsley();
 
 });
 
@@ -59,7 +69,7 @@ $( document ).ready(function() {
 	LOAD REFS MASONRY
 */
 
-function animateInRefCards() {
+function animateRefCards() {
   $('.references-list').find('.references-list-item').each(function(i) {
     var delay = i * 300;
     var $item = $(this);
@@ -69,13 +79,21 @@ function animateInRefCards() {
   });
 }
 
+function showRefCards() {
+  $('.references-list-item').addClass("visible");
+}
+
 function loadMasonry() {
   $('.references-list').imagesLoaded( function() {
 		$('.references-list').masonry({
 			itemSelector: '.references-list-item'
 		});
 
-    animateInRefCards();
+    if (isMobile.any === true) {
+      showRefCards();
+    } else {
+      animateRefCards();
+    }
 
 	});
 }
@@ -88,6 +106,10 @@ function animateCards() {
       $item.css("opacity", "1").animateCss("bounceInUp", "visible");
     }, delay);
   });
+}
+
+function showCards() {
+  $('.card').addClass("visible");
 }
 
 
@@ -163,11 +185,44 @@ function check_if_in_view() {
     //check to see if this current container is within viewport
     if ((element_bottom_position >= window_top_position) &&
         (element_top_position <= window_bottom_position) &&
-        ($element.hasClass("in-view") == false)) {
+        ($element.hasClass("in-view") === false)) {
           $element.addClass("in-view").animateCss("slideInUp");
     }
   });
 }
 
-$window.on('scroll resize', check_if_in_view);
-$window.trigger('scroll');
+if (isMobile.any === false) {
+  $window.on('scroll resize', check_if_in_view);
+  $window.trigger('scroll');
+}
+
+/*
+  PARSLEY DE
+*/
+
+Parsley.addMessages('de', {
+  defaultMessage: "Die Eingabe scheint nicht korrekt zu sein.",
+  type: {
+    email:        "Gib bitte eine gültige E-Mail-Adresse ein.",
+    url:          "Die Eingabe muss eine gültige URL sein.",
+    number:       "Die Eingabe muss eine Zahl sein.",
+    integer:      "Die Eingabe muss eine Zahl sein.",
+    digits:       "Die Eingabe darf nur Ziffern enthalten.",
+    alphanum:     "Die Eingabe muss alphanumerisch sein."
+  },
+  notblank:       "Die Eingabe darf nicht leer sein.",
+  required:       "Das hier ist ein Pflichtfeld.",
+  pattern:        "Die Eingabe scheint ungültig zu sein.",
+  min:            "Die Eingabe muss größer oder gleich %s sein.",
+  max:            "Die Eingabe muss kleiner oder gleich %s sein.",
+  range:          "Die Eingabe muss zwischen %s und %s liegen.",
+  minlength:      "Die Eingabe ist zu kurz. Es müssen mindestens %s Zeichen eingegeben werden.",
+  maxlength:      "Die Eingabe ist zu lang. Es dürfen höchstens %s Zeichen eingegeben werden.",
+  length:         "Die Länge der Eingabe ist ungültig. Es müssen zwischen %s und %s Zeichen eingegeben werden.",
+  mincheck:       "Wählen Sie mindestens %s Angaben aus.",
+  maxcheck:       "Wählen Sie maximal %s Angaben aus.",
+  check:          "Wählen Sie zwischen %s und %s Angaben.",
+  equalto:        "Dieses Feld muss dem anderen entsprechen."
+});
+
+Parsley.setLocale('de');

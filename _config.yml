@@ -11,6 +11,7 @@ email: hallo@florianweich.me
 description: Florian Weich. Designer. Webentwickler. Programmierer
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://florianweich.me" # the base hostname & protocol for your site
+google_analytics: "UA-327847-19"
 
 # Build settings
 markdown: kramdown

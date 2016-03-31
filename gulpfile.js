@@ -27,11 +27,13 @@ gulp.task('uglify', function() {
   gulp.src(['bower_components/jquery/dist/jquery.js',
             'bower_components/masonry/dist/masonry.pkgd.js',
             'bower_components/imagesloaded/imagesloaded.pkgd.js',
+            'bower_components/isMobile/isMobile.js',
+            'bower_components/parsleyjs/dist/parsley.js',
             '_javascript/scripts.js'])
     .pipe(uglify('app.min.js', {
       outSourceMap: true
     }))
-    .pipe(gulp.dest('js'))
+    .pipe(gulp.dest('js'));
 });
 
 // Task to watch changes in javascript

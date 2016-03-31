@@ -1,8 +1,8 @@
 ---
-title: Git
-type: Version control
-icon: devicons devicons-git_branch
-color: f44d27
+title: Apple
+type: Platform
+icon: devicons devicons-apple
+color: d1d3d4
 ---
 
 Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.
