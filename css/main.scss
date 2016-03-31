@@ -394,6 +394,7 @@ section.code-separator {
   box-shadow: 0px 7px 23px 0px rgba(52, 52, 52, 0.4);
   z-index: 100;
 	color: $color-bg-dark;
+	opacity: 0;
 	@media (min-width: 550px) and (max-width: $toast-breakpoint-medium) {
 		width: 75%;
 		margin: 0 auto;
@@ -722,6 +723,7 @@ section.code-separator {
 		.references-list-item {
 			display: block;
 			width: 33.33333%;
+			opacity: 0;
 			@media (max-width: $toast-breakpoint-medium) {
 				width: 50%;
 			}

@@ -23,6 +23,7 @@ collections:
   - html_tools_frameworks
   - wordpress_tools_frameworks
   - rails_tools_frameworks
+  - apps_tools_frameworks
   - education_career
   - skills_languages
   - references
