@@ -18,16 +18,16 @@
 {% if page.url == "/" %}
 <script src="{{ "/js/masterslider.min.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript">
-  var slider = new MasterSlider();
-  slider.control('arrows');
-  slider.setup('masterslider' , {
-    width:800,
-    height:350,
-    space:0,
-    loop:true,
-    view:'flow',
-    layout:'partialview'
-  });
+    var slider = new MasterSlider();
+    slider.control('arrows');
+    slider.setup('masterslider' , {
+        width:700,
+        height:450,
+        space:0,
+        loop:true,
+        view:'wave',
+        layout:'partialview'
+    });
 </script>
 {% endif %}
 
