@@ -871,9 +871,12 @@ section.code-separator {
 }
 #profile-image {
 	background-image: url({{ "../images/florianweich_profile.jpg" | prepend: site.baseurl }});
+	@include retina {
+		background-image: url({{ "../images/florianweich_profile@2x.jpg" | prepend: site.baseurl }});
+	};
 	height: 300px;
 	background-size: cover;
-	background-position: center;
+	background-position: center top;
 	border-bottom-left-radius: $border-radius-card;
 	border-bottom-right-radius: $border-radius-card;
 }
