@@ -210,8 +210,4 @@ input, textarea {
     background-color: $white;
     color: $color-bg-dark;
   }
-  &:hover:not(:focus) {
-    background-color: $color-highlight;
-    color: $color-bg-dark;
-  }
 }
