@@ -5,4 +5,4 @@ icon: devicons devicons-sublime
 color: f68102
 ---
 
-Beautiful, clean designs tailored to your business. Do it now!
+Neben *Atom* der Code-Editor meiner Wahl. Slick, extraordinary, amazing. [sublimetext.com](http://sublimetext.com){:target="_blank"}

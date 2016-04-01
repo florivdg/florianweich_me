@@ -11,4 +11,4 @@ tags:
   - PHP|devicons devicons-php
 ---
 
-Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+Die LowCarb-Königin aus Nürnberg Jasmin Mengele betreibt ihren **Blog** seit 2011. Mit einem erfolgreichen Online-Shop und entsprechend wachsenden Zugriffszahlen sollte der ehemalige Blogspot-Blog 2015 auf **Wordpress** umziehen. Seitdem haben wir viele Verbesserungen und Anpassungen an die Bedürfnisse eines Food-Blogs eingebaut.

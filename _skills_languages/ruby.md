@@ -1,8 +1,8 @@
 ---
-title: Ruby on Rails
-type: WEB FRAMEWORK
-icon: devicons devicons-ruby_on_rails
+title: Ruby
+type: LANGUAGE
+icon: devicons devicons-ruby
 color: cc0000
 ---
 
-Beautiful, clean designs tailored to your business. Do it now!
+Moderne, entwicklerfreundliche Sprache für Skripte und Ruby on Rails.

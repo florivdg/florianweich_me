@@ -5,4 +5,4 @@ icon: fa fa-coffee
 color: cdef11
 ---
 
-Beautiful, clean designs tailored to your business. Do it now!
+Selbstständiger Kaffee-Trinker, Designer, Webentwickler und App Developer

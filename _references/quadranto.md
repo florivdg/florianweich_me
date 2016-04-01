@@ -12,4 +12,4 @@ tags:
   - Objective-C|devicons devicons-code
 ---
 
-Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+Das [Eisenhower-Prinzip](https://de.wikipedia.org/wiki/Eisenhower-Prinzip){:target="_blank"} für iPhone und Mac. Das war **meine allererste App**, die über den App Store weltweit vertrieben wurde. Mit iCloud-Synchronisierung, Erinnerungen und verschiedenen Projekt-Ansichten konnte man seine Aufgaben nach Wichtigkeit und Dringlichkeit sortieren. Geschrieben in Xcode in der Sprache Objective-C.

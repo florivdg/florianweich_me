@@ -5,4 +5,4 @@ icon_img: watchos.svg
 color: 00b1b0
 ---
 
-Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.
+Betriebssystem der Apple Watch. Deine Apps am Handgelenk... [apple.com/watch](http://www.apple.com/de/watch/){:target="_blank"}

@@ -5,4 +5,4 @@ icon: devicons devicons-jquery
 color: 0769ad
 ---
 
-Beautiful, clean designs tailored to your business. Do it now!
+*Die* JS-Bibliothek. Schnell, leichtgewichtig und dennoch mächtig! [jquery.com](http://jquery.com){:target="_blank"}

@@ -5,4 +5,4 @@ icon: devicons devicons-swift
 color: ef5138
 ---
 
-Beautiful, clean designs tailored to your business. Do it now!
+Apples neue Sprache für iOS, OS X und tvOS. Designierter *Thronfolger* von Objective-C.

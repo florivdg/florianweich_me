@@ -18,5 +18,4 @@ tags:
   - Amazon Web Services|devicons devicons-aws
 ---
 
-Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit.
-Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue.
+Auftrag123.de ist ein **Vergleichsportal** für Dienstleistungen. Zwei Studenten gründeten diese Webseite 2015, derzeit befindet sich das Portal im **geschlossenen Beta-Test**. Ruby on Rails, Heroku und Amazon Web Services sorgen für die nötige Power und Skalierbarkeit der Web-App. Im Hinblick auf die spätere Erweiterung auf mobile Apps kommen uns das integrierte RESTful Routing von Rails außerdem sehr entgegen.

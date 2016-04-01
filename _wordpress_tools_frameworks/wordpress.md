@@ -5,4 +5,4 @@ icon: devicons devicons-wordpress
 color: 0072ab
 ---
 
-Beautiful, clean designs tailored to your business. Do it now!
+Mehr als einfach nur ein Blog... Eine der verbreitesten CMS im Web. [wordpress.org](http://wordpress.org){:target="_blank"}

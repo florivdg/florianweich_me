@@ -5,4 +5,4 @@ icon: devicons devicons-ruby_on_rails
 color: cc0000
 ---
 
-Beautiful, clean designs tailored to your business. Do it now!
+"Don't Repeat Yourself" und "Convention Over Configuration". [rubyonrails.org](http://rubyonrails.org){:target="_blank"}

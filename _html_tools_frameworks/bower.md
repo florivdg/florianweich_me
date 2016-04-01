@@ -5,4 +5,4 @@ icon: devicons devicons-bower
 color: ffcc2f
 ---
 
-Duis mollis, est non commodo luctus, nisi. Vestibulum id ligula porta felis euismod semper.
+*Der* Paket-Manager für JavaScript-Assets. Keine Frimmeleien mehr! [bower.io](http://bower.io){:target="_blank"}

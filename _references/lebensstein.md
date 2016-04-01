@@ -16,4 +16,4 @@ tags:
   - Bootstrap|devicons devicons-bootstrap
 ---
 
-Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue.
+Im Rahmen der **Landesgartenschau 2016** werden die "Lebenssteine" zum ersten Mal einem großen Publikum vorgestellt. Mit einer eigenen Webseite will "Mein Lebensstein" die Idee weiter promoten und den Weg für viele weitere kreative Umsetzungen ebnen. Gestaltet in Photoshop, geschrieben im Code Editor Sublime und verarbeitet von CodeKit.

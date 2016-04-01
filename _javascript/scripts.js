@@ -1,3 +1,5 @@
+calculateAge();
+
 var toast_breakpoint_medium = 700;
 
 /*
@@ -170,7 +172,7 @@ $("#mobile-menu-btn").click(function() {
   ANIMATE COLLECTION ITEMS ON SCROLL
 */
 
-var $animation_elements = $('.collection-item, .references-list-item, #contactform, #kontakt .social-list');
+var $animation_elements = $('.collection-item, .references-list-item');
 var $window = $(window);
 
 function check_if_in_view() {
@@ -238,8 +240,7 @@ function initMasterSlider() {
     width: 750,
     height: 480,
     loop:true,
-    autoplay:false,
-    speed: 15,
+    autoplay:true,
     view:'partialWave',
     layout:'partialview',
     startOnAppear:true,
@@ -256,3 +257,12 @@ function initMasterSlider() {
 $('.slider-nav li').click(function() {
   $('#masterslider').masterslider('gotoSlide', $(this).data('target-slide'));
 });
+
+/*
+  MY AGE CALC
+*/
+function calculateAge() {
+  var birthday = moment("1986-10-09");
+  var age = birthday.fromNow(true);
+  $('.myage').text(age);
+}

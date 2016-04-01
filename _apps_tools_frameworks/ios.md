@@ -5,4 +5,4 @@ icon_img: ios.svg
 color: fac032
 ---
 
-Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.
+Betriebssystem des iPhone und iPads. UIKit, CoreLocation, MapKit. [apple.com/ios](http://www.apple.com/de/ios/){:target="_blank"}

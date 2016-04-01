@@ -9,7 +9,7 @@
     {% assign slider_refs = site.references | where: "group", "slider" | sort: "slider_order" %}
     {% for ref in slider_refs limit:3 %}
     <div class="ms-slide" data-delay="7">
-      <img src="{{ ref.image_slider | prepend: "../../images/refs/" }}" alt="{{ ref.title }}"/>
+      <img src="{{ ref.image_slider | prepend: "../../images/refs/" }}" data-src="{{ ref.image_slider | prepend: "../../images/refs/" }}" alt="{{ ref.title }}"/>
     </div>
     {% endfor %}
   </div>

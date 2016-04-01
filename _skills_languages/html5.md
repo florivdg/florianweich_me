@@ -5,4 +5,4 @@ icon: devicons devicons-html5
 color: f16529
 ---
 
-Beautiful, clean designs tailored to your business. Do it now!
+Markup-Sprache für Webseiten, in Version 5 mit einer Vielzahl an Neuerungen.

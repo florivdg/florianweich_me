@@ -5,4 +5,4 @@ icon: devicons devicons-atom
 color: 4bb87d
 ---
 
-Beautiful, clean designs tailored to your business. Do it now!
+*Der* Code-Editor meiner Wahl! Hackable, git-aware, awesome! [atom.io](http://atom.io){:target="_blank"}

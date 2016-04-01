@@ -14,6 +14,7 @@ tags:
   - CSS3|devicons devicons-css3
   - jQuery|devicons devicons-jquery
   - Jekyll|devicons devicons-jekyll_small
+  - Gulp|devicons devicons-gulp
 ---
 
-Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.
+Meine eigene Webseite kommt ganz ohne CMS und dynamische Inhalte aus. Doch dank **Jekyll**, einem populären Static Site Generator, muss ich auf Templates, Variablen, Collections und Co. nicht verzichten. Das Design entstand in Photoshop, geschrieben wurde die Seite im Code Editor Atom, verarbeitet wurden Assets und Templates von Jekyll und Gulp.

@@ -36,6 +36,8 @@ gulp.task('uglify', function() {
             'bower_components/isMobile/isMobile.js',
             'bower_components/parsleyjs/dist/parsley.js',
             'bower_components/retina.js/dist/retina.js',
+            'bower_components/moment/moment.js',
+            'bower_components/moment/locale/de.js',
             '_javascript/scripts.js'])
     .pipe(uglify('app.min.js', {
       outSourceMap: true

@@ -5,4 +5,4 @@ icon: devicons devicons-jekyll_small
 color: ffcc00
 ---
 
-Beautiful, clean designs tailored to your business. Do it now!
+Erzeugt statische HTML-Seiten. Blog-aware, blazing fast, simple! [jekyllrb.com](http://jekyllrb.com){:target="_blank"}

@@ -5,4 +5,4 @@ icon: devicons devicons-envato
 color: 81b441
 ---
 
-Beautiful, clean designs tailored to your business. Do it now!
+Marktplatz für Themes & Co. Guter Startpunkt um schnell ans Ziel zu kommen. [envato.com](https://envato.com){:target="_blank"}

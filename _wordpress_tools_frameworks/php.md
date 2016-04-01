@@ -5,4 +5,4 @@ icon: devicons devicons-php
 color: 4f5b93
 ---
 
-Beautiful, clean designs tailored to your business. Do it now!
+*Die* Web-Programmiersprache schlechthin für dynamische Inhalte. [php.net](http://php.net/){:target="_blank"}

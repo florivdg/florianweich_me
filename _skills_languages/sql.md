@@ -5,4 +5,4 @@ icon: devicons devicons-postgresql
 color: 326690
 ---
 
-Beautiful, clean designs tailored to your business. Do it now!
+Daten braucht die Welt. Und Datenbanken stellen sie zur Verfügung. Quasi.

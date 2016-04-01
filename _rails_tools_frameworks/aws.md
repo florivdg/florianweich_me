@@ -5,4 +5,4 @@ icon: devicons devicons-aws
 color: f7a80d
 ---
 
-Beautiful, clean designs tailored to your business. Do it now!
+AWS bietet umfangreiche Möglichkeiten für Storage und Cloud Computing. [amazon.com](http://aws.amazon.com){:target="_blank"}

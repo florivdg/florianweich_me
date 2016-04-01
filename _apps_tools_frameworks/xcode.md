@@ -5,4 +5,4 @@ icon_img: xcode.svg
 color: 3084e9
 ---
 
-Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.
+Dreh- und Angelpunkt bei der App-Entwicklung für Apple-Systeme. [apple.com/xcode](https://developer.apple.com/xcode/){:target="_blank"}

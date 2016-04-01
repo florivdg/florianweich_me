@@ -290,6 +290,13 @@
 			background-size: auto 450px;
 		}
 	}
+	&#datenschutz {
+		.container {
+			background: $color-bg-dark url("../images/top-banner_img_legal.svg") no-repeat;
+			background-position: right -50px;
+			background-size: auto 450px;
+		}
+	}
 }
 
 // - - - - - - - - - - - - FOOTER - - - - - - - - - - - - //
@@ -688,6 +695,18 @@ section.code-separator {
 			p {
 				margin: 0;
 			}
+			a {
+				font-weight: 500;
+				border-radius: $border-radius-card/2;
+				padding: 1px 6px;
+				text-decoration: none;
+				transition: all .15s ease-in-out;
+				color: $color-bg-dark;
+				&:hover {
+					background-color: $color-highlight;
+					color: $color-bg-dark;
+				}
+			}
 		}
 	}
 }
@@ -755,6 +774,14 @@ section.code-separator {
 				.references-list-box-body {
 					padding: 10px 15px;
 					text-align: center;
+					a {
+						display: inline;
+						color: $color-bg-dark-bright;
+						&:hover {
+							color: $color-bg-dark;
+							text-decoration: underline;
+						}
+					}
 					.icon-circle {
 					  border-radius: 50%;
 					  background-color: $white;
@@ -865,7 +892,7 @@ section.code-separator {
 	.card {
 		min-height: 400px;
 		.card-body {
-			padding: 15px 30px;
+			padding: 10px 30px;
 		}
 	}
 }
@@ -951,6 +978,12 @@ section.code-separator {
 }
 
 #datenschutz {
+	&.top-banner {
+		.container {
+			padding-top: 55px;
+			height: 200px;
+		}
+	}
 	h4 {
 		font-size: 1.25em;
 		font-weight: 500;

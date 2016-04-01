@@ -5,4 +5,4 @@ icon: fa fa-graduation-cap
 color: f05050
 ---
 
-Beautiful, clean designs tailored to your business. Do it now!
+Schulabschluss 2006, Leistungskurse Chemie und Wirtschaft/Recht

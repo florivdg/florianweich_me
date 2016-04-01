@@ -9,6 +9,7 @@ tags:
   - Wordpress|devicons devicons-wordpress
   - WooCommerce|fa fa-shopping-cart
   - PHP|devicons devicons-php
+  - MySQL|devicons devicons-mysql
 ---
 
-Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+Ein Online-Shop mit umfangreichen Funktionen und Zukunftssicherheit sollte es sein. Für das Label Fadenkäfer habe ich daher ein **WooCommerce-System** auf Wordpress-Basis aufgesetzt. Kundendaten wurden aus zwei ehemaligen Shop-Systemen migriert.

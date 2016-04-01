@@ -5,4 +5,4 @@ icon: fa fa-briefcase
 color: ffd802
 ---
 
-Beautiful, clean designs tailored to your business. Do it now!
+Entwicklung automatisierter Workflows zur Sende- und Asset-Abwicklung im VoD-Bereich

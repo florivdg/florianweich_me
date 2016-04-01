@@ -5,4 +5,4 @@ icon: devicons devicons-php
 color: 4f5b93
 ---
 
-Beautiful, clean designs tailored to your business. Do it now!
+Sprache für dynamisch erzeugte Webseiten. Häufige Verwendung für Shops und CMS.

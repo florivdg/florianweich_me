@@ -5,4 +5,4 @@ icon_img: tvos.svg
 color: 323232
 ---
 
-Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.
+Betriebssystem des Apple TV, basierend auf iOS. 1080@1x. [apple.com/tv](http://www.apple.com/de/tv/){:target="_blank"}

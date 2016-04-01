@@ -5,4 +5,4 @@ icon: fa fa-university
 color: 4398e0
 ---
 
-Beautiful, clean designs tailored to your business. Do it now!
+Meine Ausbildung zum Mediengestalter Bild und Ton (IHK-geprüft) mit Schwerpunkt Fernsehen

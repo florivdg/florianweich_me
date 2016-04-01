@@ -1,8 +1,8 @@
 ---
 title: Bootstrap
-type: Framework
+type: CSS-Framework
 icon: devicons devicons-bootstrap
 color: 5b4282
 ---
 
-Beautiful, clean designs tailored to your business. Do it now!
+Eines *der* beliebtesten CSS-Frameworks für schnelle Styles. [getbootstrap.com](http://getbootstrap.com){:target="_blank"}
