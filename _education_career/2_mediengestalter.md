@@ -5,4 +5,4 @@ icon: fa fa-university
 color: 4398e0
 ---
 
-Meine Ausbildung zum Mediengestalter Bild und Ton (IHK-geprüft) mit Schwerpunkt Fernsehen
+Ausbildung zum Mediengestalter Bild und Ton (IHK-geprüft) mit Schwerpunkt Fernsehen

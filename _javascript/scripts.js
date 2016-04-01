@@ -239,9 +239,10 @@ function initMasterSlider() {
   $('#masterslider').masterslider({
     width: 750,
     height: 480,
+    space: 0,
     loop:true,
     autoplay:true,
-    view:'partialWave',
+    view:'wave',
     layout:'partialview',
     startOnAppear:true,
     controls: {

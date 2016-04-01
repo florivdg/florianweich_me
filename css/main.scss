@@ -520,11 +520,7 @@ section.code-separator {
 			}
 		}
 	}
-	.ms-partialview-template {
-		max-height: 448px;
-	}
 	.ms-slide-bgcont {
-	  box-shadow: 0px 8px 40px 0px rgba(52, 52, 52, 0.75);
 		border-top-right-radius: $border-radius-card;
 		border-top-left-radius: $border-radius-card;
 	}
@@ -742,6 +738,10 @@ section.code-separator {
 #references-main {
 	margin-top: -50px;
 	$refs-margin: 15px;
+	@media (max-width: $toast-breakpoint-small) {
+		padding: 23px 0;
+		overflow-x: hidden;
+	}
 	.references-list {
 		@extend %clearfix;
 		margin: 0;

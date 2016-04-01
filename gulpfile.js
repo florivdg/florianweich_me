@@ -15,7 +15,7 @@ gulp.task('copy_bower_components', function() {
     'bower_components/animate.css/animate.css',
     '_css/masterslider.css',
     '_css/masterslider.default.css',
-    '_css/ms-partialview.css'])
+    '_css/ms-caro3d.css'])
     .pipe(concat('vendor.css'))
 		.pipe(cssmin())
 		.pipe(gulp.dest('./css/'));
