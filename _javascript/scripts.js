@@ -68,6 +68,14 @@ $( document ).ready(function() {
 
   $('#contactform').parsley();
 
+  /*
+    SLIDER
+  */
+
+  if ( $('#masterslider').length > 0 ) {
+    initMasterSlider();
+  }
+
 });
 
 
@@ -75,32 +83,16 @@ $( document ).ready(function() {
 	LOAD REFS MASONRY
 */
 
-function animateRefCards() {
-  $('.references-list').find('.references-list-item').each(function(i) {
-    var delay = i * 300;
-    var $item = $(this);
-    setTimeout(function() {
-      $item.css("opacity", "1").animateCss("bounceInUp", "visible");
-    }, delay);
-  });
-}
-
-function showRefCards() {
-  $('.references-list-item').addClass("visible");
-}
-
 function loadMasonry() {
   $('.references-list').imagesLoaded( function() {
 		$('.references-list').masonry({
 			itemSelector: '.references-list-item'
 		});
-
-    if (isMobile.any === true) {
-      showRefCards();
+    if (isMobile.any === false) {
+      check_if_in_view();
     } else {
-      animateRefCards();
+      showRefCards();
     }
-
 	});
 }
 
@@ -116,6 +108,10 @@ function animateCards() {
 
 function showCards() {
   $('.card').addClass("visible");
+}
+
+function showRefCards() {
+  $('.references-list-item').addClass("visible");
 }
 
 
@@ -174,7 +170,7 @@ $("#mobile-menu-btn").click(function() {
   ANIMATE COLLECTION ITEMS ON SCROLL
 */
 
-var $animation_elements = $('.collection-item, #contactform, #kontakt .social-list');
+var $animation_elements = $('.collection-item, .references-list-item, #contactform, #kontakt .social-list');
 var $window = $(window);
 
 function check_if_in_view() {
@@ -192,7 +188,7 @@ function check_if_in_view() {
     if ((element_bottom_position >= window_top_position) &&
         (element_top_position <= window_bottom_position) &&
         ($element.hasClass("in-view") === false)) {
-          $element.addClass("in-view").animateCss("slideInUp");
+          $element.css("opacity", "1").addClass("in-view").animateCss("slideInUp", "visible");
     }
   });
 }
@@ -232,3 +228,31 @@ Parsley.addMessages('de', {
 });
 
 Parsley.setLocale('de');
+
+/*
+  REF SLIDER
+*/
+
+function initMasterSlider() {
+  $('#masterslider').masterslider({
+    width: 750,
+    height: 480,
+    loop:true,
+    autoplay:false,
+    speed: 15,
+    view:'partialWave',
+    layout:'partialview',
+    startOnAppear:true,
+    controls: {
+      arrows: { autohide:true }
+    }
+  }).on(MSSliderEvent.CHANGE_START, function(e){
+    var current_slide = $('#masterslider').masterslider('index');
+    $('.slider-nav li').removeClass("active");
+    $('li[data-target-slide="'+ current_slide +'"]').addClass("active");
+  });
+}
+
+$('.slider-nav li').click(function() {
+  $('#masterslider').masterslider('gotoSlide', $(this).data('target-slide'));
+});

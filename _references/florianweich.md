@@ -1,7 +1,10 @@
 ---
 title: florianweich.me
 subtitle: Homepage
+group: slider
 image: florianweich.jpg
+image_slider: florianweich_slider.jpg
+slider_order: 0
 icon: html5.svg
 link: http://www.florianweich.me
 tags:

@@ -14,7 +14,8 @@ gulp.task('copy_bower_components', function() {
     'bower_components/font-awesome/css/font-awesome.css',
     'bower_components/animate.css/animate.css',
     '_css/masterslider.css',
-    '_css/masterslider.default.css'])
+    '_css/masterslider.default.css',
+    '_css/ms-partialview.css'])
     .pipe(concat('vendor.css'))
 		.pipe(cssmin())
 		.pipe(gulp.dest('./css/'));
@@ -34,6 +35,7 @@ gulp.task('uglify', function() {
             'bower_components/imagesloaded/imagesloaded.pkgd.js',
             'bower_components/isMobile/isMobile.js',
             'bower_components/parsleyjs/dist/parsley.js',
+            'bower_components/retina.js/dist/retina.js',
             '_javascript/scripts.js'])
     .pipe(uglify('app.min.js', {
       outSourceMap: true

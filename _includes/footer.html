@@ -17,18 +17,6 @@
 
 {% if page.url == "/" %}
 <script src="{{ "/js/masterslider.min.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript">
-    var slider = new MasterSlider();
-    slider.control('arrows');
-    slider.setup('masterslider' , {
-        width:700,
-        height:450,
-        space:0,
-        loop:true,
-        view:'wave',
-        layout:'partialview'
-    });
-</script>
 {% endif %}
 
 {{ if site.google_analytics }}

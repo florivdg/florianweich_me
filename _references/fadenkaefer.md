@@ -2,6 +2,7 @@
 title: Fadenkäfer
 subtitle: Online-Shop
 image: fadenkaefer.jpg
+image_slider: fadenkaefer.jpg
 icon: wordpress.svg
 link: http://www.fadenkaefer.de
 tags:
