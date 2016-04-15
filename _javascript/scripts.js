@@ -30,7 +30,6 @@ $( document ).ready(function() {
 	    if ($target.length === 0) return;
 
       // Disable scroll ANIMATIONS
-      console.log(target);
       if (target == "#kontakt") {
         $target.find("#contactform, .social-list").addClass("in-view visible");
       }
