@@ -1,9 +1,11 @@
 ---
 title: Quadranto
-subtitle: App
-image: quadranto.jpg
+subtitle: App iOS, Mac OS X
+group:
+image: quadranto-ios.jpg
 icon: apple.svg
-link:
+link: /images/refs/quadranto-ios-poster.jpg
+data-featherlight: /images/refs/quadranto-ios-poster.jpg
 tags:
   - Photoshop|devicons devicons-photoshop
   - iOS & OS X|devicons devicons-apple
@@ -12,4 +14,4 @@ tags:
   - Objective-C|devicons devicons-code
 ---
 
-Das [Eisenhower-Prinzip](https://de.wikipedia.org/wiki/Eisenhower-Prinzip){:target="_blank"} für iPhone und Mac. Das war **meine allererste App**, die über den App Store weltweit vertrieben wurde. Mit iCloud-Synchronisierung, Erinnerungen und verschiedenen Projekt-Ansichten konnte man seine Aufgaben nach Wichtigkeit und Dringlichkeit sortieren. Geschrieben in Xcode in der Sprache Objective-C.
+Das Eisenhower-Prinzip für iPhone und den Mac. Das war **meine allererste App**, die ich 2 Jahre lang über den App Store weltweit vertrieben habe. Mit iCloud-Synchronisierung, Erinnerungen und verschiedenen Projekt-Ansichten konnte man seine Aufgaben nach Wichtigkeit und Dringlichkeit sortieren. Entwickelt in Xcode für iOS und Mac OS X in Objective-C.

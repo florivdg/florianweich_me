@@ -13,7 +13,7 @@ permalink: /referenzen/
       {% for ref in site.references %}
       <li class="references-list-item">
         {% if ref.link %}
-        <a href="{{ ref.link }}" target="_blank" rel="nofollow">
+        <a href="{{ ref.link }}" target="_blank" {% if ref.data-featherlight %} data-featherlight="{{ ref.data-featherlight }}" {% endif %}>
         {% endif %}
           <div class="references-list-box">
             <div class="references-list-box-header">

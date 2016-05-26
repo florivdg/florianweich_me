@@ -13,6 +13,7 @@ gulp.task('copy_bower_components', function() {
     'bower_components/devicons/css/devicons.css',
     'bower_components/font-awesome/css/font-awesome.css',
     'bower_components/animate.css/animate.css',
+    'bower_components/featherlight/release/featherlight.min.css',
     '_css/masterslider.css',
     '_css/masterslider.default.css',
     '_css/ms-caro3d.css'])
@@ -38,6 +39,7 @@ gulp.task('uglify', function() {
             'bower_components/retina.js/dist/retina.js',
             'bower_components/moment/moment.js',
             'bower_components/moment/locale/de.js',
+            'bower_components/featherlight/release/featherlight.min.js',
             '_javascript/scripts.js'])
     .pipe(uglify('app.min.js', {
       outSourceMap: true

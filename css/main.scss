@@ -802,11 +802,16 @@ section.code-separator {
 					padding: 10px 15px;
 					text-align: center;
 					a {
-						display: inline;
-						color: $color-bg-dark-bright;
+						display: inline-block;
+						font-weight: 500;
+						border-radius: $border-radius-card/2;
+						padding: 1px 6px;
+						text-decoration: none;
+						transition: all .15s ease-in-out;
+						background-color: $color-highlight;
+						color: $color-bg-dark;
 						&:hover {
-							color: $color-bg-dark;
-							text-decoration: underline;
+							background-color: $white;
 						}
 					}
 					.icon-circle {
@@ -1100,5 +1105,20 @@ section.code-separator {
 	.container {
 		padding-top: 55px;
 		height: 200px;
+	}
+}
+
+// - - - - - - - - - - - - FEATHERLIGHT - - - - - - - - - - - - //
+.featherlight {
+	&:last-of-type {
+		background: rgba(46, 52, 64, 0.9);
+	}
+	.featherlight-content {
+		padding: 0;
+		border-bottom: 0;
+	}
+	.featherlight-close-icon {
+		font-family: "Work Sans", sans-serif;
+		background: rgba(255, 255, 255, 0.66);
 	}
 }
