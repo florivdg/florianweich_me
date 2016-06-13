@@ -4,7 +4,7 @@ subtitle: Dienstleistungs-Portal
 group: slider
 image: auftrag123.jpg
 image_slider: auftrag123_slider.jpg
-slider_order: 1
+slider_order: 2
 icon: rails.svg
 link: http://www.auftrag123.de
 tags:

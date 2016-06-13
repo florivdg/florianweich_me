@@ -1,10 +1,7 @@
 ---
 title: Mein Lebensstein
 subtitle: Homepage
-group: slider
 image: lebensstein.jpg
-image_slider: lebensstein_slider.jpg
-slider_order: 2
 icon: html5.svg
 link: http://www.mein-lebensstein.de
 tags:
