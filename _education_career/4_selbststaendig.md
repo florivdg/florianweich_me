@@ -1,5 +1,5 @@
 ---
-title: Designer & Webentwickler
+title: Designer & Entwickler
 type: Selbstständig | seit 2013
 icon: fa fa-coffee
 color: cdef11
