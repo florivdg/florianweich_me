@@ -928,6 +928,17 @@ section.code-separator {
 		}
 	}
 }
+#educationcareer {
+	.cv {
+		a.btn-white {
+			display: inline-block;
+			margin-top: 50px;
+		}
+		.fa.fa-file-text-o {
+			margin-right: 6px;
+		}
+	}
+}
 #profile-image {
 	background-image: url({{ "../images/florianweich_profile.jpg" | prepend: site.baseurl }});
 	@include retina {
