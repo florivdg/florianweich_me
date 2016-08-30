@@ -263,6 +263,6 @@ $('.slider-nav li').click(function() {
 */
 function calculateAge() {
   var birthday = moment("1986-10-09");
-  var age = birthday.fromNow(true);
-  $('.myage').text(age);
+  var age = birthday.diff(moment(), 'years') * -1;
+  $('.myage').text(age + " Jahre");
 }
