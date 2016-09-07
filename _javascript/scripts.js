@@ -171,7 +171,7 @@ $("#mobile-menu-btn").click(function() {
   ANIMATE COLLECTION ITEMS ON SCROLL
 */
 
-var $animation_elements = $('.collection-item, .references-list-item');
+var $animation_elements = $('.collection-item, .references-list-item, .btn-animated');
 var $window = $(window);
 
 function check_if_in_view() {
