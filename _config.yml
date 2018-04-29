@@ -10,14 +10,13 @@ title: Florian Weich | Designer & Entwickler
 email: hallo@florianweich.me
 description: Apple Developer, Frontend- und Backend-Entwickler & Webdesigner aus Leidenschaft. Ich spreche HTML, SCSS, JavaScript, SQL, Ruby, Swift und mehr
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://florianweich.me" # the base hostname & protocol for your site
-google_analytics: "UA-327847-19"
+url: "https://florianweich.me" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
 sass:
   style: compressed
-gems:
+plugins:
   - octopress-autoprefixer
 exclude: [node_modules, gulpfile.js, bower_components, Gemfile, Gemfile.lock, package.json, _javascript, _css]
 collections:

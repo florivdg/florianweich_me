@@ -151,6 +151,12 @@ section.std-pad {
   padding: $padding-section 0;
 }
 
+.flex-desktop {
+  @media(min-width: 800px) {
+    display: flex;
+  }
+}
+
 // - - - - - - - - - - - - BUTTONS - - - - - - - - - - - //
 .dark-bg {
   background-color: $color-bg-dark;
