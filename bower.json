@@ -1,0 +1,35 @@
+{
+  "name": "florianweich_me",
+  "description": "Homepage Florian Weich",
+  "main": "index.js",
+  "authors": [
+    "Florian Weich"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "homepage"
+  ],
+  "homepage": "https://www.florianweich.me",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "^8.0.0",
+    "devicons": "^1.8.0",
+    "font-awesome": "^4.7.0",
+    "animate.css": "^3.5.2",
+    "featherlight": "^1.7.13",
+    "jquery": "^3.3.1",
+    "masonry-layout": "masonry#^4.2.1",
+    "imagesloaded": "^4.1.4",
+    "isMobile": "^0.4.1",
+    "parsleyjs": "^2.8.1",
+    "retina.js": "^2.1.2",
+    "moment": "^2.22.1"
+  }
+}
