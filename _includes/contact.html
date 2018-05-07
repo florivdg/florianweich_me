@@ -2,11 +2,9 @@
   <div class="container">
     <h3><span class="bold white">sagen</span>sie<span>hallo</span></h3>
     <p>Sie suchen einen <strong>Designer</strong>, <strong>Web-Entwickler</strong> oder <strong>Apple Developer</strong>? Dann sind Sie bei mir genau richtig!</p>
-    <form method="POST" id="contactform">
+    <form method="POST" id="contactform" action="{{ site.baseurl }}/forms/kontakt.php">
 
-      <input type="text" name="_gotcha" style="display:none">
-      <input type="hidden" name="_next" value="{{ "/danke/" | prepend: site.url }}">
-      <input type="hidden" name="_subject" value="Neue Nachricht via florianweich.me">
+      <input type="text" name="subject" style="display:none">
 
       <fieldset>
         <div class="row">
@@ -14,7 +12,7 @@
             <input type="text" name="name" value="" placeholder="Name" required="required">
           </div>
           <div class="col col--6-of-12">
-            <input type="email" name="_replyto" value="" placeholder="E-Mail" required="required">
+            <input type="email" name="email" value="" placeholder="E-Mail" required="required">
           </div>
         </div>
         <div class="row">
@@ -23,18 +21,15 @@
           </div>
         </div>
         <div class="row">
+          <div class="col col--12-of-12 privacypolicy-col">
+            <label for="privacypolicy"><input type="checkbox" name="privacypolicy" id="privacypolicy" required="required"> Ich habe die <a href="{{ "/datenschutz/" | prepend: site.baseurl }}">Datenschutzerklärung</a> gelesen und akzeptiere sie.</label>
+          </div>
           <div class="col col--12-of-12">
             <button type="submit" class="btn btn-white">Senden</button>
           </div>
         </div>
       </fieldset>
     </form>
-    <script>
-        var contactform =  document.getElementById('contactform');
-        var pre = "hallo";
-        var main = "florianweich";
-        contactform.setAttribute('action', '//formspree.io/' + pre + '@' + main + '.' + 'me');
-    </script>
     {% include social_list.html %}
   </div>
 </section>

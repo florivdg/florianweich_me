@@ -1056,7 +1056,7 @@ section.code-separator {
 		max-width: 800px;
 		display: block;
 		margin: 0 auto;
-		input {
+		input:not([type=checkbox]) {
 			width: 100%;
 			margin-top: 10px;
 		}
@@ -1067,6 +1067,15 @@ section.code-separator {
 		button {
 			margin-top: 10px;
 			float: right;
+		}
+	}
+	.privacypolicy-col {
+		text-align: left;
+		margin-top: 0.25rem;
+		margin-bottom: 0.25rem;
+		input[type=checkbox] {
+			position: relative;
+			top: -1px;
 		}
 	}
 	.social-list {

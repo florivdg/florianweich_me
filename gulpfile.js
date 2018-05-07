@@ -32,7 +32,7 @@ gulp.task('copy_bower_components', function() {
 // Task to uglify and concat js
 gulp.task('uglify', function() {
   gulp.src(['bower_components/jquery/dist/jquery.js',
-            'bower_components/masonry/dist/masonry.pkgd.js',
+            'bower_components/masonry-layout/dist/masonry.pkgd.js',
             'bower_components/imagesloaded/imagesloaded.pkgd.js',
             'bower_components/isMobile/isMobile.js',
             'bower_components/parsleyjs/dist/parsley.js',

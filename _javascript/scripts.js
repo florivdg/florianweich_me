@@ -69,6 +69,27 @@ $( document ).ready(function() {
 
   $('#contactform').parsley();
 
+  /**
+   * CONTACT FORM SUBMISSION
+   */
+  $('#contactform').on('submit', function(e){
+    e.preventDefault();
+
+    // Check if form is valid
+    if ( $(this).parsley().isValid() ) {
+      $.post( $(this).attr('action'), $(this).serialize() ).done(function (result) {
+        if ( result.success == true ) {
+          document.location.href = "/danke/";
+        } else {
+          console.log("Form submission failed!");
+          if ( result.error ) {
+            console.log("Error: " + result.error);
+          }
+        }
+      });
+    }
+  });
+
   /*
     SLIDER
   */
