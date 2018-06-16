@@ -10,7 +10,7 @@ var uglify = require('gulp-uglifyjs');
 gulp.task('copy_bower_components', function() {
   gulp.src(
     ['bower_components/normalize-css/normalize.css',
-    'bower_components/devicons/css/devicons.css',
+    'node_modules/devicons/css/devicons.css',
     'bower_components/font-awesome/css/font-awesome.css',
     'bower_components/animate.css/animate.css',
     'bower_components/featherlight/release/featherlight.min.css',

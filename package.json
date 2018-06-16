@@ -4,7 +4,7 @@
   "description": "Homepage Florian Weich",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulp": "gulp"
   },
   "author": "Florian Weich",
   "license": "ISC",
@@ -17,5 +17,8 @@
     "gulp-shell": "^0.5.2",
     "gulp-uglifyjs": "^0.6.2",
     "lodash": "^4.6.1"
+  },
+  "dependencies": {
+    "devicons": "^1.8.0"
   }
 }
