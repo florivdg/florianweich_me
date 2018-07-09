@@ -11,6 +11,7 @@ email: hallo@florianweich.me
 description: Apple Developer, Frontend- und Backend-Entwickler & Webdesigner aus Leidenschaft. Ich spreche HTML, SCSS, JavaScript, SQL, Ruby, Swift und mehr
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://florianweich.me" # the base hostname & protocol for your site
+version: 3.0
 
 # Build settings
 markdown: kramdown

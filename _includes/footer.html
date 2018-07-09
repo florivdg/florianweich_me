@@ -2,9 +2,7 @@
   <div class="container">
     <div class="footer-navigation">
       <ul>
-        {% assign pages_list = site.pages | sort: 'order' %}
-        {% assign group = 'footer-menu' %}
-        {% include pages_list.html %}
+        {% assign pages_list = site.pages | sort: 'order' %} {% assign group = 'footer-menu' %} {% include pages_list.html %}
       </ul>
     </div>
     <div class="copyright">
@@ -13,8 +11,5 @@
   </div>
 </footer>
 
-<script src="{{ "/js/app.min.js" | prepend: site.baseurl }}"></script>
-
-{% if page.url == "/" %}
-<script src="{{ "/js/masterslider.min.js" | prepend: site.baseurl }}"></script>
-{% endif %}
+<script src='{{ "/js/app.min.js" | prepend: site.baseurl | append: "?" | append: site.version }}'></script> {% if page.url == "/" %}
+<script src='{{ "/js/masterslider.min.js" | prepend: site.baseurl | append: "?" | append: site.version }}'></script> {% endif %}
