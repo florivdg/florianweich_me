@@ -1,8 +1,14 @@
 <section class="dark-bg" id="kontakt">
   <div class="container">
-    <h3><span class="bold white">sagen</span>sie<span>hallo</span></h3>
-    <p>Sie suchen einen <strong>Designer</strong>, <strong>Web-Entwickler</strong> oder <strong>Apple Developer</strong>? Dann sind Sie bei mir genau richtig!</p>
-    <form method="POST" id="contactform" action="{{ site.baseurl }}/forms/kontakt.php">
+    <h3>
+      <span class="bold white">sagen</span>sie
+      <span>hallo</span>
+    </h3>
+    <p>Sie suchen einen
+      <strong>Designer</strong>,
+      <strong>Web-Entwickler</strong> oder
+      <strong>Apple Developer</strong>? Dann sind Sie bei mir genau richtig!</p>
+    <form method="POST" id="contactform">
 
       <input type="text" name="subject" style="display:none">
 
@@ -22,7 +28,9 @@
         </div>
         <div class="row">
           <div class="col col--12-of-12 privacypolicy-col">
-            <label for="privacypolicy"><input type="checkbox" name="privacypolicy" id="privacypolicy" required="required"> Ich habe die <a href="{{ "/datenschutz/" | prepend: site.baseurl }}">Datenschutzerklärung</a> gelesen und akzeptiere sie.</label>
+            <label for="privacypolicy">
+              <input type="checkbox" name="privacypolicy" id="privacypolicy" required="required"> Ich habe die
+              <a href="{{ " /datenschutz/ " | prepend: site.baseurl }}">Datenschutzerklärung</a> gelesen und akzeptiere sie.</label>
           </div>
           <div class="col col--12-of-12">
             <button type="submit" class="btn btn-white">Senden</button>
